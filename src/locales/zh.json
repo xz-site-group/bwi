@@ -1,0 +1,11 @@
+{
+    "nav": {
+          "aboutUs": "关于我们",
+          "services": "服务",
+          "mediaInventory": "媒体库存",
+          "newsInsights": "新闻洞察",
+          "contactUs": "联系我们"
+    },
+    "hello": "你好世界",
+    "welcome": "欢迎来到我们的网站"
+}

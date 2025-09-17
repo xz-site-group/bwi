@@ -1,0 +1,11 @@
+{
+    "nav": {
+        "aboutUs": "About Us",
+        "services": "Services",
+        "mediaInventory": "Media Inventory",
+        "newsInsights": "News & Insights",
+        "contactUs": "Contact Us"
+    },
+    "hello": "Hello World",
+    "welcome": "Welcome to our website"
+}
