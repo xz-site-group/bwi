@@ -7,11 +7,15 @@ const props = defineProps({
         type: String,
         default: '',
     },
+    isFlex: {
+        type: Boolean,
+        default: false,
+    }
 })
 </script>
 
 <template>
-    <div class="base-layout">
+    <div class="base-layout" :class="{'base-layout--flex': isFlex}">
         <div class="base-layout__header w-full">
             <CommonHeader :static-route-path="props.currentPath"></CommonHeader>
         </div>
@@ -30,6 +34,9 @@ const props = defineProps({
 
 <style scoped>
 .base-layout {
+
+}
+.base-layout--flex {
     height: 100vh;
     height: 100dvh;
     display: flex;
