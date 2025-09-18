@@ -23,29 +23,35 @@ const isMenuOpen = ref(false)
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value
 }
+const navTextIsI18n = ref(true)
 const navList = ref([
     {
         key: 'about-us',
+        name: 'About Us',
         i18nKey: 'nav.aboutUs',
         path: '/about',
     },
     {
         key: 'services',
+        name: 'Services',
         i18nKey: 'nav.services',
         path: '/services',
     },
     {
         key: 'media-inventory',
+        name: 'Media Inventory',
         i18nKey: 'nav.mediaInventory',
         path: '/media-inventory',
     },
     {
         key: 'news-insights',
+        name: 'News & Insights',
         i18nKey: 'nav.newsInsights',
         path: '/news-insights',
     },
     {
         key: 'contact-us',
+        name: 'Contact Us',
         i18nKey: 'nav.contactUs',
         path: '/contact',
     },
@@ -138,7 +144,7 @@ onUnmounted(() => {
                             class="content px-2 py-2"
                             :class="{ active: selectedNavPath === item.path }"
                         >
-                            {{ $t(item.i18nKey) }}
+                            {{ navTextIsI18n ? $t(item.i18nKey) : item.name }}
                         </div>
                     </RouterLink>
                 </div>
@@ -167,7 +173,7 @@ onUnmounted(() => {
         class="fixed inset-0 bg-black bg-opacity-50 z-50"
         @click="isMenuOpen = false"
     >
-        <div class="h-full min-w-[220px] max-w-xs bg-white absolute right-0 top-0">
+        <div class="h-full min-w-[186px] px-2 max-w-xs bg-white absolute right-0 top-0">
             <div class="text-black pt-4">
                 <RouterLink
                     v-for="item in navList"
@@ -184,7 +190,7 @@ onUnmounted(() => {
                             class="mobile-item-nav--content"
                             :class="{ active: selectedNavPath === item.path }"
                         >
-                            {{ $t(item.i18nKey) }}
+                            {{ navTextIsI18n ? $t(item.i18nKey) : item.name }}
                         </div>
                     </div>
                 </RouterLink>
@@ -212,7 +218,7 @@ onUnmounted(() => {
                     </div>
 
                     <!-- Language Panel -->
-                    <div v-show="isShowLangPanel" class="absolute z-9999 mt-2 w-48 bg-white shadow-lg rounded-md">
+                    <div v-show="isShowLangPanel" class="absolute z-9999 mt-2 w-36 bg-white shadow-lg rounded-md">
                         <div class="py-2">
                             <div
                                 class="px-4 py-2 cursor-pointer hover:bg-gray-100 transition duration-150 ease-in-out"

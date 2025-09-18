@@ -6,6 +6,13 @@
         "newsInsights": "News & Insights",
         "contactUs": "Contact Us"
     },
+    "home": {
+        "paragraph1": "Your Brand.",
+        "paragraph2": "Our Channels.",
+        "paragraph3": "One Billboard Way.",
+        "description": "An integrated route to visibility, impact and growth.",
+        "button": "Learn More"
+    },
     "hello": "Hello World",
     "welcome": "Welcome to our website"
 }

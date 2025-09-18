@@ -43,6 +43,6 @@ const props = defineProps({
 }
 .base-layout__content {
     flex: 1;
-    overflow-y: auto;
+
 }
 </style>

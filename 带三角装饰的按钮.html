@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>带三角装饰的按钮</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+      }
+
+      .container {
+          max-width: 800px;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 30px;
+          backdrop-filter: blur(10px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+          color: white;
+          text-align: center;
+          margin-bottom: 30px;
+          font-size: 2.5rem;
+      }
+
+      .button-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 40px;
+          margin-top: 40px;
+      }
+
+      /* 您的按钮样式 */
+      .custom-button {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 48px;
+          background-color: #ff0000;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          border: none;
+          cursor: pointer;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+      }
+
+      /* 左侧三角 */
+      .custom-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-top: 24px solid #ff0000;
+          border-bottom: 24px solid #ff0000;
+          border-left: 10px solid transparent;
+          z-index: 2;
+      }
+
+      /* 右侧三角 */
+      .custom-button::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-top: 24px solid #ff0000;
+          border-bottom: 24px solid #ff0000;
+          border-right: 10px solid transparent;
+          z-index: 2;
+      }
+
+      /* 替代方案1 - 使用伪元素 */
+      .alternative-1 {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 48px;
+          background-color: #ff0000;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+      }
+
+      .alternative-1::before,
+      .alternative-1::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 15px;
+          height: 100%;
+          background: #ff0000;
+          z-index: 1;
+      }
+
+      .alternative-1::before {
+          left: -7px;
+          transform: skewX(-15deg);
+      }
+
+      .alternative-1::after {
+          right: -7px;
+          transform: skewX(-15deg);
+      }
+
+      .alternative-1 span {
+          position: relative;
+          z-index: 2;
+      }
+
+      /* 替代方案2 - 使用clip-path */
+      .alternative-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          height: 48px;
+          background-color: #ff0000;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          border: none;
+          cursor: pointer;
+          clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0% 50%);
+          box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+      }
+
+      /* 代码展示 */
+      .code-container {
+          background: rgba(0, 0, 0, 0.7);
+          border-radius: 10px;
+          padding: 20px;
+          margin-top: 40px;
+          color: white;
+          font-family: 'Fira Code', monospace;
+          overflow-x: auto;
+      }
+
+      .code-title {
+          color: #ff7b72;
+          margin-bottom: 10px;
+          font-size: 1.2rem;
+      }
+
+      .code {
+          color: #c9d1d9;
+          line-height: 1.5;
+      }
+
+      .comment {
+          color: #8b949e;
+      }
+
+      .selector {
+          color: #ff7b72;
+      }
+
+      .property {
+          color: #79c0ff;
+      }
+
+      .value {
+          color: #a5d6ff;
+      }
+
+      .button-title {
+          color: white;
+          text-align: center;
+          margin-top: 15px;
+          font-size: 1rem;
+      }
+
+      .explanation {
+          color: white;
+          margin-top: 30px;
+          padding: 20px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+      }
+
+      .explanation h2 {
+          margin-bottom: 15px;
+          color: #ff7b72;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>带三角装饰的按钮</h1>
+
+  <div class="button-container">
+    <div>
+      <div class="custom-button">Learn More</div>
+      <div class="button-title">使用border方法</div>
+    </div>
+
+    <div>
+      <div class="alternative-1"><span>Learn More</span></div>
+      <div class="button-title">使用skew变换方法</div>
+    </div>
+
+    <div>
+      <div class="alternative-2">Learn More</div>
+      <div class="button-title">使用clip-path方法</div>
+    </div>
+  </div>
+
+  <div class="code-container">
+    <div class="code-title">CSS代码 (使用border方法):</div>
+    <div class="code">
+      <span class="selector">.custom-button</span> {<br>
+      &nbsp;&nbsp;<span class="property">position</span>: <span class="value">relative</span>;<br>
+      &nbsp;&nbsp;<span class="property">width</span>: <span class="value">200px</span>;<br>
+      &nbsp;&nbsp;<span class="property">height</span>: <span class="value">48px</span>;<br>
+      &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#ff0000</span>;<br>
+      &nbsp;&nbsp;<span class="property">color</span>: <span class="value">white</span>;<br>
+      &nbsp;&nbsp;<span class="property">font-weight</span>: <span class="value">bold</span>;<br>
+      &nbsp;&nbsp;<span class="property">display</span>: <span class="value">flex</span>;<br>
+      &nbsp;&nbsp;<span class="property">justify-content</span>: <span class="value">center</span>;<br>
+      &nbsp;&nbsp;<span class="property">align-items</span>: <span class="value">center</span>;<br>
+      }<br><br>
+
+      <span class="comment">/* 左侧三角 */</span><br>
+      <span class="selector">.custom-button::before</span> {<br>
+      &nbsp;&nbsp;<span class="property">content</span>: <span class="value">''</span>;<br>
+      &nbsp;&nbsp;<span class="property">position</span>: <span class="value">absolute</span>;<br>
+      &nbsp;&nbsp;<span class="property">top</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">left</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">width</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">height</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">border-top</span>: <span class="value">24px solid #ff0000</span>;<br>
+      &nbsp;&nbsp;<span class="property">border-bottom</span>: <span class="value">24px solid #ff0000</span>;<br>
+      &nbsp;&nbsp;<span class="property">border-left</span>: <span class="value">10px solid transparent</span>;<br>
+      &nbsp;&nbsp;<span class="property">z-index</span>: <span class="value">2</span>;<br>
+      }<br><br>
+
+      <span class="comment">/* 右侧三角 */</span><br>
+      <span class="selector">.custom-button::after</span> {<br>
+      &nbsp;&nbsp;<span class="property">content</span>: <span class="value">''</span>;<br>
+      &nbsp;&nbsp;<span class="property">position</span>: <span class="value">absolute</span>;<br>
+      &nbsp;&nbsp;<span class="property">top</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">right</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">width</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">height</span>: <span class="value">0</span>;<br>
+      &nbsp;&nbsp;<span class="property">border-top</span>: <span class="value">24px solid #ff0000</span>;<br>
+      &nbsp;&nbsp;<span class="property">border-bottom</span>: <span class="value">24px solid #ff0000</span>;<br>
+      &nbsp;&nbsp;<span class="property">border-right</span>: <span class="value">10px solid transparent</span>;<br>
+      &nbsp;&nbsp;<span class="property">z-index</span>: <span class="value">2</span>;<br>
+      }
+    </div>
+  </div>
+
+  <div class="explanation">
+    <h2>实现说明</h2>
+    <p>我提供了三种实现方法：</p>
+    <ol>
+      <li><strong>使用border方法</strong>：通过CSS的border属性创建三角形，这种方法简单直接，但需要精确计算尺寸。</li>
+      <li><strong>使用skew变换方法</strong>：通过伪元素的skew变换创建斜角，这种方法更灵活，可以调整斜角的角度。</li>
+      <li><strong>使用clip-path方法</strong>：使用clip-path属性直接裁剪出带斜角的形状，最现代的方法，但IE兼容性较差。</li>
+    </ol>
+    <p>所有方法都避免了使用透明边框带来的问题，并确保了背景颜色的一致性。</p>
+  </div>
+</div>
+</body>
+</html>
