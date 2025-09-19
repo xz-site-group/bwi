@@ -31,25 +31,17 @@ const gotoAbout = () => {
 <style scoped>
 
 .custom-btn {
-    background: #ff0000;
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
-.custom-btn:before,
-.custom-btn:after{
+.custom-btn:before{
     content: '';
     position: absolute;
     top: 0;
-    width: 15px;
+    width: 100%;
     height: 100%;
     background: #ff0000;
-    z-index: 1;
-}
-.custom-btn:before {
-    left: -7px;
+    z-index: -1;
     transform: skewX(-15deg);
 }
-.custom-btn:after {
-    right: -7px;
-    transform: skewX(-15deg);
-}
+
 </style>

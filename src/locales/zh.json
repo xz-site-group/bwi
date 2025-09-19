@@ -1,10 +1,17 @@
 {
     "nav": {
           "aboutUs": "关于我们",
-          "services": "服务",
-          "mediaInventory": "媒体库存",
-          "newsInsights": "新闻洞察",
+          "services": "服务范围",
+          "mediaInventory": "媒介类型",
+          "newsInsights": "新闻与洞察",
           "contactUs": "联系我们"
+    },
+    "footer": {
+        "weBuildChannels": "我们构建引导消费者线上线下每一段旅程的渠道。",
+        "whereBrands": "品牌汇聚之地",
+        "meetRealSpace": "遇见真实空间",
+        "fromScreenToStreet": "从屏幕到街头。",
+        "fromAdToExperience": "从广告到体验。"
     },
     "home": {
         "paragraph1": "您的品牌。",
@@ -12,6 +19,17 @@
         "paragraph3": "一路直达。",
         "description": "一条通往可见性、影响力和增长的整合之路。",
         "button": "了解更多"
+    },
+    "aboutUs": {
+        "title1": "我们构建连接品牌与人群的渠道",
+        "title2": "连接品牌与人群",
+        "description1": "Billboard Way Inc. (BWI) 是 ABC Prime Group 下属的综合广告和媒体公司，总部位于菲律宾。",
+        "description2": "作为 ACR Towers 的姐妹公司，BWI 管理和运营着物理和数字媒体渠道——从标志性的 LED 外立面和商场内活动到房产应用和电商平台。",
+        "description3": "我们的使命是通过连接客户旅程中的每一个触点，为品牌提供整合的可见性、影响力和增长路径。",
+        "description4": "我们将优质的现场媒体资源与内部数字平台开发相结合，提供量身定制的营销解决方案，以实现真正的效果。",
+        "list1": "- 总部位于菲律宾，服务 ACR Towers 及其他地区",
+        "list2": "- 管理现场和在线广告渠道",
+        "list3": "- 提供全方位的媒体租赁、活动执行和平台开发服务"
     },
     "hello": "你好世界",
     "welcome": "欢迎来到我们的网站"

@@ -6,12 +6,30 @@
         "newsInsights": "News & Insights",
         "contactUs": "Contact Us"
     },
+    "footer": {
+        "weBuildChannels": "We build channels that guide consumers through every journey, online and off.",
+        "whereBrands": "WHERE BRANDS",
+        "meetRealSpace": "MEET REAL SPACE",
+        "fromScreenToStreet": "FROM SCREEN TO STREET.",
+        "fromAdToExperience": "FROM AD TO EXPERIENCE."
+    },
     "home": {
         "paragraph1": "Your Brand.",
         "paragraph2": "Our Channels.",
         "paragraph3": "One Billboard Way.",
         "description": "An integrated route to visibility, impact and growth.",
         "button": "Learn More"
+    },
+    "aboutUs": {
+        "title1": "We Build Channels That",
+        "title2": "Connect Brands and People.",
+        "description1": "Billboard Way Inc. (BWI) is an integrated advertising and media company under ABC Prime Group, based in the Philippines.",
+        "description2": "As the sister company of ACR Towers, BWI manages and operates both physical and digital media channels — from iconic LED facades and in-mall activations to property apps and e-commerce platforms.",
+        "description3": "Our mission is to provide brands with an integrated route to visibility, impact, and growth by connecting every touchpoint in the customer.",
+        "description4": "We combine prime on-site media resources with in-house digital platform development to deliver tailor-made marketing solutions that drive real results.",
+        "list1": "- Headquartered in the Philippines, servicing ACR Towers and beyond",
+        "list2": "- Managing both on-site and online advertising channels",
+        "list3": "- Providing full-service media leasing, campaign execution, and platform development"
     },
     "hello": "Hello World",
     "welcome": "Welcome to our website"

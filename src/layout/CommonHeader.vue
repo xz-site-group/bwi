@@ -18,6 +18,7 @@ const props = defineProps({
 })
 
 const route = useRoute()
+
 const currentPath = computed(() => route.path)
 const isMenuOpen = ref(false)
 function toggleMenu() {
@@ -75,22 +76,40 @@ const changeLang = (lang) => {
     isShowLangPanel.value = false
     setCurrentLang(lang)
 }
-
+const scrollPosition = ref(0);
+// 监听滚动事件
+const handleScroll = () => {
+    scrollPosition.value = window.scrollY;
+};
+// 计算背景色的透明度
+const headerStyle = computed(() => {
+    const opacity = Math.min(scrollPosition.value / 200, 0.8);
+    return {
+        backgroundColor: `rgba(0, 0, 0, ${opacity})`,
+    };
+});
 onMounted(() => {
     // 添加全局点击事件监听
     document.addEventListener('click', closeLangPanel)
+    window.addEventListener('scroll', handleScroll);
+
 })
 
 onUnmounted(() => {
     // 移除全局点击事件监听
     document.removeEventListener('click', closeLangPanel)
+    window.removeEventListener('scroll', handleScroll);
 })
+
+
+
 </script>
 
 <template>
-    <header id="header" class="header bg-transparent text-white w-full">
+    <header id="header" class="header bg-transparent text-white w-full" :style="headerStyle">
+        <!--        h-14 sm:h-16 lg:h-20 xl:h-[100px] -->
         <div
-            class="mx-auto h-14 sm:h-16 lg:h-20 xl:h-[100px] flex flex-wrap items-center justify-between mt-0 py-2 px-[20px] sm:px-10"
+            class="mx-auto h-[12vw] max-h-[100px] min-h-[56px] flex flex-wrap items-center justify-between mt-0 py-2 px-[20px] sm:px-10"
         >
             <!-- logo -->
             <div class="flex items-center">
@@ -136,7 +155,7 @@ onUnmounted(() => {
                         v-for="item in navList"
                         :key="item.key"
                         :to="item.path"
-                        class="item-nav pc-item-nav"
+                        class="item-nav pc-item-nav font-bold"
                         :class="{ active: selectedNavPath === item.path }"
                         @click="itemNavHandler(item)"
                     >
@@ -181,7 +200,7 @@ onUnmounted(() => {
                     :to="item.path"
                     custom
                     v-slot="{ navigate }"
-                    class="item-nav mobile-item-nav px-4 py-2 block"
+                    class="item-nav mobile-item-nav px-4 py-2 block font-bold"
                     :class="{ active: selectedNavPath === item.path }"
                     @click.stop="itemNavHandler(item)"
                 >
@@ -201,7 +220,7 @@ onUnmounted(() => {
                     <!-- Language Selector Button -->
                     <div class="flex pt-4 flex-row items-center justify-center cursor-pointer"  @click.stop="openLangPanel">
                         <img :src="LangSvg" alt="Language Icon" class="w-4 h-4 inline-block mr-2" />
-                        <span class="text-lg font-medium">{{ currentLangName }}</span>
+                        <span class="text-base ">{{ currentLangName }}</span>
                         <svg
                             class="w-4 h-4 ml-2"
                             fill="none"
@@ -227,7 +246,7 @@ onUnmounted(() => {
                                 @click.stop="changeLang(item.code)"
                             >
                                 <div class="flex items-center justify-center">
-                                    <span class="text-lg font-medium">{{ item.name }}</span>
+                                    <span class="text-sm	 ">{{ item.name }}</span>
                                 </div>
                             </div>
                         </div>
