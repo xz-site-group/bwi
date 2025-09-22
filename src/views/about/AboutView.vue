@@ -19,7 +19,6 @@ console.log('BannerImg', typeof BannerImg, srcsetStr)
         <BasicAd class="about-basic-ad" :src="BannerImg"  >
             <template v-slot:logo>
                 <div class="container  px-16  md:px-24 lg:pl-44 mx-auto m-8 text-white lg:w-[80%]">
-                    <div class="h-[12vw] max-h-[100px] min-h-[56px]"></div>
                     <img class="w-[35vw]" :src="BwiSource" alt="">
                 </div>
             </template>

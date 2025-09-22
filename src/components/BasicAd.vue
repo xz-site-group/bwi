@@ -1,4 +1,5 @@
-<script setup lang="ts">
+<script setup >
+import HeaderPlaceHandler from  "@/layout/HeaderPlaceHandler.vue"
 // 定义 props 来接收 srcset 字符串
 const props = defineProps({
     srcset: {
@@ -26,13 +27,15 @@ const props = defineProps({
         </div>
         <div class="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-50">
             <div class="w-full h-full flex flex-col justify-center items-center text-white" v-if="showLogo || $refs.logo">
+                <HeaderPlaceHandler></HeaderPlaceHandler>
                 <slot name="logo">
                     <div class="basic-ad-logo w-[6vw] h-[55%] bg-[#ff0000]"></div>
                 </slot>
             </div>
         </div>
-        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 w-full pb-20 lg:pb-28">
-            <div class="container px-10 md:px-16 lg:px-20 mx-auto m-8 text-white lg:w-[80%]">
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 w-full  lg:pb-28">
+            <div class="container px-10 md:px-16 lg:px-20 mx-auto  text-white lg:w-[80%]">
+                <HeaderPlaceHandler></HeaderPlaceHandler>
                 <slot></slot>
             </div>
         </div>

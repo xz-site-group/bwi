@@ -6,9 +6,9 @@ import youtubeSvg from "@/assets/images/common/youtube.svg";
 import xianjiSvg from "@/assets/images/common/tw.svg";
 import twitterSvg from "@/assets/images/common/tw.svg";
 
-const { fontSizeClamp: copyrightTextSize } = useResponsiveFontSize(13, 22, 750, 1920)
-const { fontSizeClamp: firstFontSizeClamp } = useResponsiveFontSize(17, 48, 750, 1920)
-const { fontSizeClamp: twoFontSizeClamp } = useResponsiveFontSize(26, 105, 750, 1920)
+const { fontSizeClamp: copyrightTextSize } = useResponsiveFontSize(13, 22)
+const { fontSizeClamp: firstFontSizeClamp } = useResponsiveFontSize(17, 48 )
+const { fontSizeClamp: twoFontSizeClamp } = useResponsiveFontSize(26, 105)
 </script>
 
 <template>
