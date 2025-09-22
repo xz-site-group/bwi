@@ -2,8 +2,8 @@ name: Deploy Vite Vue3 App to GitHub Pages
 
 on:
   push:
-    branches: [master] # 当推送到 main 分支时触发
-  workflow_dispatch: # 允许在 Actions 标签页手动触发
+    branches: [master, dev-pub] # 添加了 dev-pub 分支
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -36,13 +36,16 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Fix SPA routing for GitHub Pages
+        run: cp dist/index.html dist/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # 上传 Vite 构建生成的 dist 文件夹
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
