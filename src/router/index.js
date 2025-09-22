@@ -22,6 +22,11 @@ const router = createRouter({
             name: 'services',
             component: () => import('../views/services/services.vue'),
         },
+        {
+            path: '/media-inventory',
+            name: 'media-inventory',
+            component: () => import('../views/media_inventory/MediaInventory.vue'),
+        },
     ],
 })
 
