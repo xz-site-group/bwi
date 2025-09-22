@@ -6,7 +6,7 @@ import MediaInventorySectionContent1 from '@/views/media_inventory/components/Me
 import MediaInventorySectionContent2 from '@/views/media_inventory/components/MediaInventorySectionContent2.vue'
 import MediaInventorySectionContent3 from '@/views/media_inventory/components/MediaInventorySectionContent3.vue'
 import MediaInventoryFooter from '@/views/media_inventory/components/MediaInventoryFooter.vue'
-import ServicesAdImg from '@/assets/images/services/services_bg_1920.webp'
+import MediaInventoryTopImg from '@/assets/images/media_inventory/top_ad_img_1920.png'
 import { useResponsiveFontSize } from '@/composables/useResponsiveFontSize.js'
 
 const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
@@ -14,7 +14,7 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
 
 <template>
     <BaseLayout>
-        <BasicAd :src="ServicesAdImg">
+        <BasicAd :src="MediaInventoryTopImg">
             <div class="" :style="{ fontSize: baseAdTextSize }">
                 <div>FROM SCREENS TO STREETS.</div>
                 <div>FROM ADS TO EXPERIENCES.</div>

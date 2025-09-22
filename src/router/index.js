@@ -27,6 +27,16 @@ const router = createRouter({
             name: 'media-inventory',
             component: () => import('../views/media_inventory/MediaInventory.vue'),
         },
+        {
+            path: '/news-insights',
+            name: 'news-insights',
+            component: () => import('../views/news_insights/index.vue'),
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            component: () => import('../views/contact/index.vue'),
+        },
     ],
 })
 
