@@ -16,7 +16,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
                 </div>
             </SectionTitle>
             <div class="h-[3vw] max-h-[100px]"></div>
-            <div class="text-[clamp(9px,2vw,32px)] lg:text-4xl flex justify-end">
+            <div class="text-[clamp(10px,2vw,32px)] lg:text-4xl flex justify-end">
                 <div class="lg:w-[80%] xl:w-[60%] leading-[1]">
                     <div>
                         <p>{{ $t('aboutUs.description2') }}</p>
@@ -33,22 +33,22 @@ import SectionTitle from '@/components/SectionTitle.vue'
             </div>
             <div class="h-[3vw] max-h-[100px]"></div>
             <!--      企业  介绍-->
-            <div class="text-[clamp(14px,3vw,32px)] flex justify-end lg:text-4xl">
+            <div class="text-[clamp(10px,2vw,32px)] flex justify-end lg:text-4xl">
                 <ul class="lg:w-[80%] xl:w-[60%] leading-[1]">
                     <li
-                        class="pt-4"
+                        class="pt-1"
                         data-i18n-text="- Headquartered in the Philippines, servicing ACR Towers and beyond"
                     >
                         {{ $t('aboutUs.list1') }}
                     </li>
                     <li
-                        class="pt-4"
+                        class="pt-1"
                         data-i18n-text="- Managing both on-site and online advertising channels"
                     >
                         {{ $t('aboutUs.list2') }}
                     </li>
                     <li
-                        class="pt-4"
+                        class="pt-1"
                         data-i18n-text="- Providing full-service media leasing, campaign execution, and platform development"
                     >
                         {{ $t('aboutUs.list3') }}
