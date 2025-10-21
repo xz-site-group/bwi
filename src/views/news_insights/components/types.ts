@@ -5,5 +5,5 @@ export interface INewsItem {
     time: string; // 发布时间
     link: string; // 新闻链接
     src: string; // 图片路径
-    content: string; // 新闻内容
+    summary: string; // 新闻内容
 }

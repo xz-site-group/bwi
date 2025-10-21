@@ -27,10 +27,20 @@ const router = createRouter({
             name: 'media-inventory',
             component: () => import('../views/media_inventory/MediaInventory.vue'),
         },
+
         {
             path: '/news-insights',
             name: 'news-insights',
             component: () => import('../views/news_insights/index.vue'),
+        },
+        {
+            path: '/news-insights/:articleId',
+            name: 'article-detail',
+            component: () => import('../views/news_insights/ArticleDetail.vue'),
+            props: true,
+            meta: {
+
+            }
         },
         {
             path: '/contact',
