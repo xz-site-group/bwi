@@ -7,7 +7,7 @@ const { fontSizeClamp: descTextSize } = useResponsiveFontSize(13, 28)
 
 <template>
     <div class="mod-1 pt-2 md:pt-9">
-        <div class="img-wrap flex flex-col ">
+        <div class="img-wrap md:img-wrap-md flex flex-col ">
             <slot name="img">
                 <img :src="adImg01" alt="" />
             </slot>
@@ -29,6 +29,21 @@ const { fontSizeClamp: descTextSize } = useResponsiveFontSize(13, 28)
     </div>
 </template>
 
-<style scoped>
+<style scoped >
+.img-wrap {
+    width: 100%; /* 或者设置为固定宽度 */
+    overflow: hidden; /* 防止内容溢出 */
+}
+.img-wrap img {
+    width: 100%; /* 或者设置为固定宽度 */
+    height: 100%; /* 确保高度不会超过宽度 */
+    overflow: hidden; /* 防止内容溢出 */
+}
+@media (min-width: 768px) {
+    .img-wrap {
+        width: calc( ((100vw - 0.25rem) / 3)  );;
+        height: calc( ((100vw - 0.25rem) / 3)  );
+    }
 
+}
 </style>

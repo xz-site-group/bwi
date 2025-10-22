@@ -71,7 +71,7 @@ const resetForm = () => {
     <div class=" m-auto px-4 ">
         <!-- 表单 -->
         <div v-if="!isSuccess && !isError" class="bg-white p-8 md:pt-0 rounded-[10px] ">
-            <form @submit.prevent="handleSubmit">
+            <form @submit.prevent="handleSubmit" novalidate>
                 <!-- Topic -->
                 <div class="mb-4">
                     <label for="topic" class="block font-semibold text-gray-700 mb-2">Topic <span class="text-red-500">*</span></label>

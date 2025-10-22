@@ -57,4 +57,11 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_03.webp'
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover; /* 保证图片覆盖整个容器 */
+}
+</style>
