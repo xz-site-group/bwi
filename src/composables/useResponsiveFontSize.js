@@ -12,12 +12,12 @@ export function useResponsiveFontSize(min, max, minScreenWidth = 375, maxScreenW
         const screenWidthRange = maxScreenWidth - minScreenWidth;
         intermediateVW.value = (fontSizeRange / screenWidthRange) * 100;
 
-        // if (windowInnerWidth.value >= maxScreenWidth) {
-        //     intermediateVW.value = max;
-        // }
-        // if (windowInnerWidth.value <= minScreenWidth ) {
-        //     intermediateVW.value = min;
-        // }
+        if (windowInnerWidth.value >= maxScreenWidth) {
+            intermediateVW.value = (max / maxScreenWidth) * 100;
+        }
+        if (windowInnerWidth.value <= minScreenWidth ) {
+            intermediateVW.value = (min / minScreenWidth) * 100;
+        }
     };
 
     // 初始化计算

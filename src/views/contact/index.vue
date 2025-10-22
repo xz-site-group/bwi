@@ -6,8 +6,8 @@ import { useResponsiveFontSize } from '@/composables/useResponsiveFontSize.js'
 
 const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
 
-const { fontSizeClamp: sectionTitleTextSize } = useResponsiveFontSize(42, 90)
-const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(84, 180)
+const { fontSizeClamp: sectionTitleTextSize } = useResponsiveFontSize(36, 90)
+const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(72, 180)
 </script>
 
 <template>
@@ -73,6 +73,9 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(84, 1
 </style>
 <style>
 .D8bnZd {
-    background: #fff;
+    background: #fff !important;
+}
+.QvWxOd {
+    background: #ff0000 !important;
 }
 </style>
