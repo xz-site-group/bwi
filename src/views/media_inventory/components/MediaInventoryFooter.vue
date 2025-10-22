@@ -24,7 +24,7 @@ const { fontSizeClamp: prviewTextSize } = useResponsiveFontSize(16, 32)
                     </div>
                     <div class="flex flex-row items-center relative pt-4 pl-[10px]">
                         <div
-                            class="relative custom-btn font-bold w-[100px] h-8 flex flex-row justify-center items-center cursor-pointer"
+                            class="relative custom-btn font-bold w-[140px] h-10 flex flex-row justify-center items-center cursor-pointer"
                         >
                             <a
                                 class="absolute z-10 p-2 px-4 cursor-pointer"
