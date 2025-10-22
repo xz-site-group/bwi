@@ -49,7 +49,7 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(72, 1
                         <div class="pt-2">
                             📍 Address: N.Bacalso Ave., Corner V. Rama St., Cebu City, Philippines
                         </div>
-                        <div class="pt-2">We'll get back to you within 1–2 business days.</div>
+                        <div class="p-2 md:p-10">We’ll get back to you within 1–2 business days.</div>
                     </div>
                 </div>
             </div>

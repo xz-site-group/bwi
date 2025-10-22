@@ -1,22 +1,9 @@
 <script setup lang="ts">
-import {  ref } from 'vue'
+import { ref } from 'vue'
 
-
-const topicOptions = ref([
-    {
-        value: 'Advertising',
-        label: 'Advertising',
-        text: 'Advertising',
-    },
-    {
-        value: 'Customer Service',
-        label: 'Customer Service',
-        text: 'Advertising',
-    }
-])
 // 表单状态
 const formData = ref({
-    topic: topicOptions.value[0].value,
+    topic: '',
     name: '',
     email: '',
     message: ''
@@ -56,7 +43,7 @@ const handleSubmit = async () => {
 
 const resetForm = () => {
     formData.value = {
-        topic: topicOptions.value[0].value,
+        topic: '',
         name: '',
         email: '',
         message: ''
@@ -70,109 +57,94 @@ const resetForm = () => {
     <!-- 自定义表单 -->
     <div class=" m-auto px-4 ">
         <!-- 表单 -->
-        <div v-if="!isSuccess && !isError" class="bg-white p-8 md:pt-0 rounded-[10px] ">
+        <div v-if="!isSuccess && !isError" class="bg-white p-8 rounded-[10px] shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
             <form @submit.prevent="handleSubmit">
                 <!-- Topic -->
-                <div class="mb-4">
+                <div class="mb-6">
                     <label for="topic" class="block font-semibold text-gray-700 mb-2">Topic <span class="text-red-500">*</span></label>
                     <select
                         v-model="formData.topic"
                         id="topic"
                         required
-                        class="w-full p-3 border-b border-gray-300 text-base focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Select a topic"
-                        data-lang-text="选择主题"
+                        class="w-full p-3 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     >
-<!--                        <option disabled value="" data-lang-text="">Select a topic</option>-->
-                        <option v-for="(item, index) in topicOptions" :key="index" :value="item.value" data-lang-text="投放广告"> {{ item.label }}</option>
-
+                        <option value="">Choose</option>
+                        <option value="投放广告">投放广告</option>
+                        <option value="客服">客服</option>
                     </select>
                 </div>
 
                 <!-- Name -->
-                <div class="mb-4">
+                <div class="mb-6">
                     <label for="name" class="block font-semibold text-gray-700 mb-2">Name <span class="text-red-500">*</span></label>
                     <input
                         v-model="formData.name"
                         type="text"
                         id="name"
                         required
-                        class="w-full p-3 border-b border-gray-300 text-base focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Enter your name"
-                        title="Enter your name"
-                        data-lang-text="请输入您的名字"
+                        class="w-full p-3 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     >
                 </div>
 
                 <!-- Email -->
-                <div class="mb-4">
+                <div class="mb-6">
                     <label for="email" class="block font-semibold text-gray-700 mb-2">Email <span class="text-red-500">*</span></label>
                     <input
                         v-model="formData.email"
                         type="email"
                         id="email"
                         required
-                        class="w-full p-3 border-b border-gray-300 text-base focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Enter your email"
-                        data-lang-text="请输入您的邮箱"
+                        class="w-full p-3 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     >
                 </div>
 
                 <!-- Message -->
-                <div class="mb-4">
-                    <label for="message" class="block font-semibold text-gray-700 mb-2">Message </label>
+                <div class="mb-8">
+                    <label for="message" class="block font-semibold text-gray-700 mb-2">Message <span class="text-red-500">*</span></label>
                     <textarea
                         v-model="formData.message"
                         id="message"
                         required
                         rows="5"
-                        class="w-full p-3 border border-gray-300 text-base resize-vertical focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Enter your message"
-                        data-lang-text="请输入您的消息"
+                        class="w-full p-3 border border-gray-300 rounded-lg text-base resize-vertical focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     ></textarea>
                 </div>
 
                 <!-- 提交按钮 -->
-                <div class="pl-[15px]">
-                    <button
-                        type="submit"
-                        :disabled="isSubmitting"
-                        class="submit-btn w-full text-white py-4 px-6 rounded-lg text-base font-medium hover:opacity-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
-
-                    >
-                        <span v-if="!isSubmitting">Send</span>
-                        <span v-else>Send...</span>
-                    </button>
-                </div>
-
+                <button
+                    type="submit"
+                    :disabled="isSubmitting"
+                    class="w-full bg-[#4285f4] text-white py-4 px-6 rounded-lg text-base font-medium hover:bg-[#3367d6] disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+                >
+                    <span v-if="!isSubmitting">提交</span>
+                    <span v-else>提交中...</span>
+                </button>
             </form>
         </div>
 
         <!-- 成功消息 -->
         <div v-if="isSuccess" class="bg-green-50 border-2 border-green-400 rounded-lg p-8 text-center shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
             <div class="text-2xl mb-4">✅</div>
-            <p class="text-xl font-semibold text-green-800 mb-6">Submission Successful!</p>
-            <p class="text-gray-700 mb-8">Thank you for your feedback. We will contact you soon.</p>
+            <p class="text-xl font-semibold text-green-800 mb-6">提交成功！</p>
+            <p class="text-gray-700 mb-8">感谢您的反馈，我们将尽快与您联系。</p>
             <button
                 @click="resetForm"
-                style="background: #FF0000;color: #fff;"
                 class="bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-lg font-medium transition-all duration-200"
             >
-                Submit Again
+                再次提交
             </button>
         </div>
 
         <!-- 错误消息 -->
         <div v-if="isError" class="bg-red-50 border-2 border-red-400 rounded-lg p-8 text-center shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
             <div class="text-2xl mb-4">❌</div>
-            <p class="text-xl font-semibold text-red-800 mb-6">Submission Failed</p>
-            <p class="text-gray-700 mb-8">Please try again later or send an email to info@bwi.com</p>
+            <p class="text-xl font-semibold text-red-800 mb-6">提交失败</p>
+            <p class="text-gray-700 mb-8">请稍后重试或直接发送邮件至 info@bwi.com</p>
             <button
                 @click="resetForm"
                 class="bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-lg font-medium transition-all duration-200"
-                style="background: #FF0000;color: #fff;"
             >
-                Retry
+                重试
             </button>
         </div>
 
@@ -184,50 +156,5 @@ const resetForm = () => {
 </template>
 
 <style scoped>
-/* 输入框样式 */
-input, select {
-    border: none;
-    border-bottom: 1px solid #707070;
-    background: transparent;
-    box-shadow: none;
-    outline: none;
-    padding: 5px;
-}
 
-textarea {
-    border: 1px solid #707070;
-    background: transparent;
-    box-shadow: none;
-    outline: none;
-}
-
-/* 聚焦时的样式 */
-input:focus, select:focus, textarea:focus {
-    border-color: #4285f4;
-    box-shadow: none;
-    outline: none;
-}
-input:-internal-autofill-selected {
-    background: transparent;
-}
-.submit-btn {
-    position: relative;
-    height: 48px;
-    width: 180px;
-
-}
-.submit-btn:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #ff0000;
-    z-index: 1;
-    transform: skewX(-15deg);
-}
-.submit-btn span {
-    position: absolute;
-    z-index: 2;
-}
 </style>
