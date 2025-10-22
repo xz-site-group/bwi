@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自定义联系表单 - BWI</title>
+  <style>
+      body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+      .form-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      h2 { text-align: center; color: #333; margin-bottom: 20px; }
+      label { display: block; font-weight: bold; color: #555; margin-bottom: 5px; margin-top: 15px; }
+      input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
+      textarea { height: 120px; resize: vertical; }
+      button { background: #4285f4; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; margin-top: 20px; }
+      button:hover { background: #3367d6; }
+      button:disabled { background: #ccc; cursor: not-allowed; }
+      .required { color: #e00; }
+      .success-message, .error-message { display: none; text-align: center; padding: 20px; border-radius: 5px; margin-top: 20px; }
+      .success-message { background: #e6f4ea; border: 1px solid #34c759; }
+      .error-message { background: #fce8e6; border: 1px solid #d93025; }
+      .success-message button, .error-message button { background: #34c759; }
+      .success-message button:hover, .error-message button:hover { background: #2ea44f; }
+      @media (max-width: 600px) { .form-container { padding: 20px; } }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h2>Your Brand. Our Channels. One Billboard Way.</h2>
+  <form id="contactForm" onsubmit="handleSubmit(event)">
+    <!-- Topic 字段：下拉选择 -->
+    <label for="topic">Topic <span class="required">*</span></label>
+    <select name="topic" id="topic" required>
+      <option value="">Choose</option>
+      <option value="投放广告">投放广告</option>
+      <option value="客服">客服</option>
+    </select>
+
+    <!-- Name 字段 -->
+    <label for="name">Name <span class="required">*</span></label>
+    <input type="text" name="name" id="name" required>
+
+    <!-- Email 字段 -->
+    <label for="email">Email <span class="required">*</span></label>
+    <input type="email" name="email" id="email" required>
+
+    <!-- Message 字段 -->
+    <label for="message">Message <span class="required">*</span></label>
+    <textarea name="message" id="message" required></textarea>
+
+    <button type="submit" id="submitButton">提交</button>
+  </form>
+  <div id="successMessage" class="success-message">
+    <p>提交成功！感谢您的反馈。</p>
+    <button onclick="resetForm()">再次提交</button>
+  </div>
+  <div id="errorMessage" class="error-message">
+    <p>提交失败，请稍后重试。</p>
+    <button onclick="resetForm()">重试</button>
+  </div>
+  <p style="text-align: center; font-size: 12px; color: #888; margin-top: 20px;">
+    Never submit passwords through Google Forms. This content is neither created nor endorsed by Google.
+  </p>
+</div>
+
+<script>
+  const formResponseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScFdpjbf2pcjCGTGpJ6HLaURmDCM-QtJIEteCoZ6_fKpo8Kyw/formResponse';
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    submitButton.disabled = true; // 显示加载状态
+    submitButton.textContent = '提交中...';
+
+    const formData = new FormData();
+    formData.append('entry.958710747', form.topic.value);  // Topic 的实际 entry ID
+    formData.append('entry.912145198', form.name.value);   // Name 的实际 entry ID
+    formData.append('entry.1684097434', form.email.value);  // Email 的实际 entry ID
+    formData.append('entry.807214667', form.message.value); // Message 的实际 entry ID
+
+    try {
+      await fetch(formResponseUrl, {
+        method: 'POST',
+        mode: 'no-cors',  // 关键：绕过 CORS
+        body: formData
+      });
+      // 由于 no-cors，无法检查响应，但如果没抛错，假设成功
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+      errorMessage.style.display = 'none';
+    } catch (error) {
+      console.error('提交错误:', error);
+      form.style.display = 'none';
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'block';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = '提交';
+    }
+  }
+
+  function resetForm() {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    form.reset();
+    form.style.display = 'block';
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+  }
+</script>
+</body>
+</html>

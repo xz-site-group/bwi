@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自定义联系表单 - BWI</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background: #f4f4f4;
+          margin: 0;
+          padding: 20px;
+      }
+
+      .form-container {
+          max-width: 600px;
+          margin: 0 auto;
+          background: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+          text-align: center;
+          color: #333;
+          margin-bottom: 20px;
+      }
+
+      label {
+          display: block;
+          font-weight: bold;
+          color: #555;
+          margin-bottom: 5px;
+          margin-top: 15px;
+      }
+
+      input, select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 16px;
+          box-sizing: border-box;
+      }
+
+      textarea {
+          height: 120px;
+          resize: vertical;
+      }
+
+      button {
+          background: #4285f4;
+          color: white;
+          padding: 15px 30px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          width: 100%;
+          margin-top: 20px;
+      }
+
+      button:hover {
+          background: #3367d6;
+      }
+
+      .required {
+          color: #e00;
+      }
+
+      @media (max-width: 600px) {
+          .form-container {
+              padding: 20px;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h2>Your Brand. Our Channels. One Billboard Way.</h2>
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLScFdpjbf2pcjCGTGpJ6HLaURmDCM-QtJIEteCoZ6_fKpo8Kyw/formResponse"
+        method="post" target="hiddenIframe">
+    <!-- Topic 字段：下拉选择 -->
+    <label for="topic">Topic <span class="required">*</span></label>
+    <select name="entry.958710747" id="topic" required>  <!-- 替换 entry.123456789 为实际 -->
+      <option value="">Choose</option>
+      <option value="投放广告">投放广告</option>
+      <option value="客服">客服</option>
+    </select>
+
+    <!-- Name 字段 -->
+    <label for="name">Name <span class="required">*</span></label>
+    <input type="text" name="entry.912145198" id="name" required>  <!-- 替换 entry.234567890 为实际 -->
+
+    <!-- Email 字段 -->
+    <label for="email">Email <span class="required">*</span></label>
+    <input type="email" name="entry.1684097434" id="email" required>  <!-- 替换 entry.345678901 为实际 -->
+
+    <!-- Message 字段 -->
+    <label for="message">Message <span class="required">*</span></label>
+    <textarea name="entry.807214667" id="message" required></textarea>  <!-- 替换 entry.987654321 为实际 -->
+
+    <button type="submit">提交</button>
+  </form>
+  <p style="text-align: center; font-size: 12px; color: #888; margin-top: 20px;">
+    Never submit passwords through Google Forms. This content is neither created nor endorsed by Google.
+  </p>
+</div>
+<!-- 隐藏 iframe 处理提交反馈 -->
+<iframe name="hiddenIframe" style="display: none;"></iframe>
+<iframe
+  src="https://docs.google.com/forms/d/e/1FAIpQLScFdpjbf2pcjCGTGpJ6HLaURmDCM-QtJIEteCoZ6_fKpo8Kyw/viewform?embedded=true"
+  width="100%"
+  height="1200px"
+  frameborder="0"
+  marginheight="0"
+  style="display: none"
+  marginwidth="0">
+  正在加载…
+</iframe>
+</body>
+</html>
