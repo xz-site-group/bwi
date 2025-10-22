@@ -12,7 +12,7 @@ defineProps({
 
 <template>
 
-    <BaseLayout>
+    <BaseLayout :current-path="'/news-insights'">
         <NewsAd></NewsAd>
         <div class="w-full h-[4vw] max-h-[100px]"></div>
         <NewsPageTitle></NewsPageTitle>
