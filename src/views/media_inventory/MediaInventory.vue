@@ -102,6 +102,7 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <!--    end 03    -->
         <div class="w-full h-[4vw] max-h-[100px]"></div>
         <MediaInventoryFooter></MediaInventoryFooter>
+
     </BaseLayout>
 </template>
 

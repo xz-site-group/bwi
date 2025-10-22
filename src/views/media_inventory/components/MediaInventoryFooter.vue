@@ -40,6 +40,7 @@ const { fontSizeClamp: prviewTextSize } = useResponsiveFontSize(16, 32)
                     </div>
                 </div>
             </div>
+            <div class="md:hidden w-full h-[4vw] max-h-[40px]"></div>
         </div>
     </section>
 </template>
