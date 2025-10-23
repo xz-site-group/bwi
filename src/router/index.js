@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/home/HomeView.vue'
-
+console.log("import.meta.env.BASE_URL",import.meta.env.BASE_URL)
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -48,6 +48,15 @@ const router = createRouter({
             component: () => import('../views/contact/index.vue'),
         },
     ],
+    // 添加 scrollBehavior
+    scrollBehavior(to, from, savedPosition) {
+        // 如果有保存的滚动位置（例如浏览器后退/前进），恢复到该位置
+        if (savedPosition) {
+            return savedPosition;
+        }
+        // 否则，新页面滚动到顶部
+        return { top: 0 };
+    },
 })
 
 export default router
