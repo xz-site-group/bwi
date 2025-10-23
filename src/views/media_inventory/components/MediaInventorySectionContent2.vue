@@ -13,48 +13,47 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_06.webp'
                 <template v-slot:img>
                     <img :src="adImg01" alt="" />
                 </template>
-                <template v-slot:title>Photo Frame</template>
-                <template v-slot:sub-title> @ Driveway and Parking</template>
-                <template v-slot:desc>Strategic Eye-Level Ads for Captive Parking Audience</template>
+                <template v-slot:title> {{ $t("mediaInventory.indoor.section_1_title") }}</template>
+                <template v-slot:sub-title> {{ $t("mediaInventory.indoor.section_1_sub_title") }}</template>
+                <template v-slot:desc> {{ $t("mediaInventory.indoor.section_1_desc") }}</template>
                 <template v-slot:sub-desc>
-                    <div>Location: Driveway and Parking</div>
-                    <div>Installation Size: 1.1m (H) x 0.8m (W)</div>
-                    <div>Screen Size: 1.08m (H) x 0.78m (W)</div>
+                    <div>{{ $t("mediaInventory.indoor.section_1_sub_desc[0]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_1_sub_desc[1]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_1_sub_desc[2]") }}</div>
                 </template>
             </MediaInventorySectionContentItem>
             <!--     end 1       -->
             <!--     start 2 -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>
-                    <img :src="adImg02" alt="" />
+                    <img :src="adImg01" alt="" />
                 </template>
-                <template v-slot:title> Light Box</template>
-                <template v-slot:sub-title>@ Project Main Entrance</template>
-                <template v-slot:desc>Close-Range Engagement for Pedestrian Traffic</template>
+                <template v-slot:title> {{ $t("mediaInventory.indoor.section_2_title") }}</template>
+                <template v-slot:sub-title> {{ $t("mediaInventory.indoor.section_2_sub_title") }}</template>
+                <template v-slot:desc> {{ $t("mediaInventory.indoor.section_2_desc") }}</template>
                 <template v-slot:sub-desc>
-                    <div>Location: Project Main Entrance</div>
-                    <div>Device Size: 1.8m (H) x 1.2m (W)</div>
-                    <div>Screen Size: 1.6m (H) x 1m (W)</div>
-                    <div>*2 devices with 4 display surfaces total</div>
+                    <div>{{ $t("mediaInventory.indoor.section_2_sub_desc[0]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_2_sub_desc[1]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_2_sub_desc[2]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_2_sub_desc[3]") }}</div>
                 </template>
             </MediaInventorySectionContentItem>
             <!--  end 2 -->
             <!--  start 3 -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>
-                    <img :src="adImg03" alt="" />
+                    <img :src="adImg01" alt="" />
                 </template>
-                <template v-slot:title> Light Box </template>
-                <template v-slot:sub-title>@ Main Entrance & Exit </template>
-                <template v-slot:desc>360° Visibility for Inbound & Outbound Traffic</template>
+                <template v-slot:title> {{ $t("mediaInventory.indoor.section_3_title") }}</template>
+                <template v-slot:sub-title> {{ $t("mediaInventory.indoor.section_3_sub_title") }}</template>
+                <template v-slot:desc> {{ $t("mediaInventory.indoor.section_3_desc") }}</template>
                 <template v-slot:sub-desc>
-                    <div>Location: Main Entrance & Exit of ARC Towers</div>
-                    <div>Installation Size: 0.8m (H) x 1.766m (W)</div>
-                    <div>Display Area: 0.79m (H) x 1.756m (W) </div>
-                    <div>Total Panels: 4 sides</div>
+                    <div>{{ $t("mediaInventory.indoor.section_3_sub_desc[0]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_3_sub_desc[1]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_3_sub_desc[2]") }}</div>
+                    <div>{{ $t("mediaInventory.indoor.section_3_sub_desc[3]") }}</div>
                 </template>
             </MediaInventorySectionContentItem>
-            <!--  end 3   -->
         </div>
     </section>
 </template>

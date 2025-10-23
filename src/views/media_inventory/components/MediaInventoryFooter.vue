@@ -17,10 +17,10 @@ const { fontSizeClamp: prviewTextSize } = useResponsiveFontSize(16, 32)
                     <img :src="MediaKit" alt="" />
                 </div>
                 <div class="md:flex-1 px-6 py-2 md:p-10">
-                    <div class="font-medium" :style="{ fontSize: titleTextSize }">Media Kit</div>
+                    <div class="font-medium" :style="{ fontSize: titleTextSize }" data-lang-text="Media Kit"> {{ $t('mediaInventory.footer.title') }}</div>
                     <div class="leading-none" :style="{ fontSize: descTextSize }">
-                        <p>Download our Media Kit</p>
-                        <p>for full specifications and rates.</p>
+                        <p data-en-text="Download our Media Kit"> {{ $t('mediaInventory.footer.desc_1') }} </p>
+                        <p data-en-text="for full specifications and rates.">{{ $t('mediaInventory.footer.desc_2') }}</p>
                     </div>
                     <div class="flex flex-row items-center relative pt-4 pl-[10px]">
                         <div
@@ -31,11 +31,11 @@ const { fontSizeClamp: prviewTextSize } = useResponsiveFontSize(16, 32)
                                 :style="{ fontSize: btnTextSize }"
                                 download
                                 :href="MediaKitPDF"
-                                >Download</a
+                                >{{ $t('mediaInventory.footer.btn_download') }}</a
                             >
                         </div>
                         <a :href="MediaKitPDF" target="_blank" class="pl-10 cursor-pointer underline"  :style="{ fontSize: prviewTextSize }"
-                            >View Online</a
+                            >{{ $t('mediaInventory.footer.btn_preview') }}</a
                         >
                     </div>
                 </div>

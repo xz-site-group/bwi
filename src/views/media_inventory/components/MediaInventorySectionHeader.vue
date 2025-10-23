@@ -20,8 +20,6 @@ const { fontSizeClamp: contentTextSize } = useResponsiveFontSize(11, 32)
                         }"
                     >
                         <slot name="title">
-                            <div>Media Leasing</div>
-                            <div>& Representation &nbsp;</div>
                         </slot>
 
                     </div>

@@ -48,7 +48,117 @@
         "section_4_content": "Building and maintaining property apps, e-commerce platforms, and campaign-specific microsites to enhance marketing reach and engagement."
     },
     "mediaInventory": {
+        "common": {
+            "title": "Media"
 
+        },
+        "banner_text_1": "PRIME MEDIA SPACES ",
+        "banner_text_2": "@THE HEART OF ARC TOWERS.",
+        "outdoor": {
+            "title": "Outdoor",
+            "desc": [
+                "Building Façade LED Wall (high-impact, visible across the district)",
+                "Large-format outdoor billboards along main entry routes",
+                "Illuminated signage in high-traffic public spaces"
+            ],
+            "section_1_title": "LED Screen",
+            "section_1_sub_title": "@ Natalio B. Bacalso Ave",
+            "section_1_desc": "Landmark-Scale LED for Maximum Citywide Reach",
+            "section_1_sub_desc": [
+                "Location: Natalio B. Bacalso Avenue",
+                "Screen Size: 6.72m (H) x 5.12m (W)",
+                "Screen Resolution: 1680px x 1280px"
+            ],
+            "section_2_title": "Light Box",
+            "section_2_sub_title": "V. Rama Avenue Entrance",
+            "section_2_desc": "Flagship-Scale, High-Visibility LED Billboard",
+            "section_2_sub_desc": [
+                "Location: V. Rama Avenue – Main Entrance",
+                "Device & Screen Size: 4.5m (H) x 4.5m (W)"
+            ],
+            "section_3_title": "Light Box",
+            "section_3_sub_title": "1F Main Entrance Driving Lane",
+            "section_3_desc": "Dual-Sided Gateway Display for Maximum Impressions",
+            "section_3_sub_desc": [
+                "Location: 1F Driving Lane – Main Entrance",
+                "Device: 1.8m (H) x 4m (W); 1.8m (H) x 5m (W)",
+                "Screen: 1.6m (H) x 3.8m (W); 1.6m (H) x 4.8m (W)",
+                "*2 devices with 4 display surfaces"
+            ]
+        },
+        "indoor": {
+            "title": "Indoor",
+            "desc": [
+                "Mall atrium banners and hanging displays",
+                "Elevator and corridor lightboxes",
+                "In-mall digital screens and interactive kiosks"
+            ],
+            "section_1_title": "Photo Frame",
+            "section_1_sub_title": "Driveway and Parking",
+            "section_1_desc": "Strategic Eye-Level Ads for Captive Parking Audience",
+            "section_1_sub_desc": [
+                "Location: Driveway and Parking",
+                "Installation Size: 1.1m (H) x 0.8m (W)",
+                "Screen Size: 1.08m (H) x 0.78m (W)"
+            ],
+            "section_2_title": "Light Box",
+            "section_2_sub_title": "Project Main Entrance",
+            "section_2_desc": "Close-Range Engagement for Pedestrian Traffic",
+            "section_2_sub_desc": [
+                "Location: Project Main Entrance",
+                "Device Size: 1.8m (H) x 1.2m (W)",
+                "Screen Size: 1.6m (H) x 1m (W)",
+                "*2 devices with 4 display surfaces total"
+            ],
+            "section_3_title": "Light Box",
+            "section_3_sub_title": "Main Entrance & Exit",
+            "section_3_desc": "360° Visibility for Inbound & Outbound Traffic",
+            "section_3_sub_desc": [
+                "Location: Main Entrance & Exit of ARC Towers",
+                "Installation Size: 0.8m (H) x 1.766m (W)",
+                "Display Area: 0.79m (H) x 1.756m (W)",
+                "Total Panels: 4 sides"
+            ]
+        },
+        "digital": {
+            "title": "Digital",
+            "desc": [
+                "Property app: push notifications, splash screens, in-app banners",
+                "Online mall: homepage banners, promotional zones",
+                "In-mall digital screens and interactive kiosks"
+            ],
+            "section_1_title": "Photo Frame",
+            "section_1_sub_title": "1F Elevator Messaging Entry Point",
+            "section_1_desc": "Captive Elevator Audience for Brand",
+            "section_1_sub_desc": [
+                "Location: ARC Towers Entry Point",
+                "Device Size: 0.4m (H) x 0.7m (W)",
+                "Screen Size: 32 inches (1080px x 1920px)",
+                "2 sets available"
+            ],
+            "section_2_title": "HD Display",
+            "section_2_sub_title": "1F Entrance Lobby",
+            "section_2_desc": "Premium 75” HD Screen for High-Impact Lobby Ads",
+            "section_2_sub_desc": [
+                "Location: Main Entry Point of ARC Towers",
+                "Screen Size: 75 inches (1080px x 1920px)"
+            ],
+            "section_3_title": "In App Ads",
+            "section_3_sub_title": "ARC Mall App ABC Prime App",
+            "section_3_desc": "Direct Digital Reach via Property and Mall Apps",
+            "section_3_sub_desc": [
+                "Location: in App",
+                "Device: Web & Mobile",
+                "Screen: 9:16 & 16:9, Customize banner"
+            ]
+        },
+        "footer": {
+            "title": "Media Kit",
+            "desc_1": "Download our Media Kit",
+            "desc_2": "for full specifications and rates.",
+            "btn_download": "Download",
+            "btn_preview": "View Online"
+        }
     },
     "newsInsights": {
 

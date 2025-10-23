@@ -48,7 +48,116 @@
         "section_4_content": "构建并维护物业应用、电子商务平台以及活动特定的微型网站，以增强营销覆盖面和参与度。"
     },
     "mediaInventory": {
-
+        "common": {
+            "title": "媒体"
+        },
+        "banner_text_1": "核心位置 ",
+        "banner_text_2": "优质媒体空间",
+        "outdoor": {
+            "title": "户外",
+            "desc": [
+                "建筑立面LED墙（高影响力，全区可见）",
+                "主要入口路线沿线大尺寸户外广告牌",
+                "高流量公共空间的照明标识"
+            ],
+            "section_1_title": "LED屏幕",
+            "section_1_sub_title": "@ Natalio B. Bacalso Ave",
+            "section_1_desc": "地标级LED，覆盖全市范围",
+            "section_1_sub_desc": [
+                "位置：Natalio B. Bacalso大道",
+                "屏幕尺寸：6.72米（高）x 5.12米（宽）",
+                "屏幕分辨率：1680像素 x 1280像素"
+            ],
+            "section_2_title": "灯箱",
+            "section_2_sub_title": "V. Rama Avenue入口",
+            "section_2_desc": "旗舰级高可见性LED广告牌",
+            "section_2_sub_desc": [
+                "位置：V. Rama大道 - 主入口",
+                "设备及屏幕尺寸：4.5米（高）x 4.5米（宽）"
+            ],
+            "section_3_title": "灯箱",
+            "section_3_sub_title": "1楼主入口车道",
+            "section_3_desc": "双面网关展示，最大化印象",
+            "section_3_sub_desc": [
+                "位置：1楼车道 - 主入口",
+                "设备：1.8米（高）x 4米（宽）; 1.8米（高）x 5米（宽）",
+                "屏幕：1.6米（高）x 3.8米（宽）; 1.6米（高）x 4.8米（宽）",
+                "2台设备，共4个展示面"
+            ]
+        },
+        "indoor": {
+            "title": "室内",
+            "desc": [
+                "商场中庭横幅和悬挂展示",
+                "电梯和走廊灯箱",
+                "商场内数字屏幕和互动信息亭"
+            ],
+            "section_1_title": "相框广告",
+            "section_1_sub_title": "车道和停车场",
+            "section_1_desc": "针对停车场观众的战略性视线广告",
+            "section_1_sub_desc": [
+                "位置：车道和停车场",
+                "安装尺寸：1.1米（高）x 0.8米（宽）",
+                "屏幕尺寸：1.08米（高）x 0.78米（宽）"
+            ],
+            "section_2_title": "灯箱",
+            "section_2_sub_title": "项目主入口",
+            "section_2_desc": "针对行人流量的近距离互动",
+            "section_2_sub_desc": [
+                "位置：项目主入口",
+                "设备尺寸：1.8米（高）x 1.2米（宽）",
+                "屏幕尺寸：1.6米（高）x 1米（宽）",
+                "2台设备，共4个展示面"
+            ],
+            "section_3_title": "灯箱",
+            "section_3_sub_title": "主入口和出口",
+            "section_3_desc": "针对进出流量的360°可见性",
+            "section_3_sub_desc": [
+                "位置：ARC Towers主入口和出口",
+                "安装尺寸：0.8米（高）x 1.766米（宽）",
+                "展示区域：0.79米（高）x 1.756米（宽）",
+                "总面板：4面"
+            ]
+        },
+        "digital": {
+            "title": "数字",
+            "desc": [
+                "物业应用：推送通知、启动屏、应用内横幅",
+                "在线商城：首页横幅、促销区域",
+                "商场内数字屏幕和互动信息亭"
+            ],
+            "section_1_title": "相框广告",
+            "section_1_sub_title": "1楼电梯信息入口点",
+            "section_1_desc": "针对电梯观众的品牌广告",
+            "section_1_sub_desc": [
+                "位置：ARC Towers入口点",
+                "设备尺寸：0.4米（高）x 0.7米（宽）",
+                "屏幕尺寸：32英寸（1080像素 x 1920像素）",
+                "可用2套"
+            ],
+            "section_2_title": "高清显示屏",
+            "section_2_sub_title": "1楼入口大厅",
+            "section_2_desc": "针对高影响力大厅广告的75英寸高清屏幕",
+            "section_2_sub_desc": [
+                "位置：ARC Towers主入口点",
+                "屏幕尺寸：75英寸（1080像素 x 1920像素）"
+            ],
+            "section_3_title": "应用内广告",
+            "section_3_sub_title": "ARC商城应用 ABC Prime应用",
+            "section_3_desc": "通过物业和商城应用直接数字触达",
+            "section_3_sub_desc": [
+                "位置：应用内",
+                "设备：网页和移动设备",
+                "屏幕：9:16 和 16:9，可定制横幅"
+            ]
+        },
+        "footer": {
+            "title": "媒体资料包",
+            "desc_1": "下载我们的媒体资料包",
+            "desc_2": "了解完整的规格和价格。",
+            "btn_download": "下载",
+            "btn_preview": "在线预览"
+        }
     },
     "newsInsights": {
 

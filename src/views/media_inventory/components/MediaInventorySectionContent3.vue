@@ -13,43 +13,43 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_09.webp'
                 <template v-slot:img>
                     <img :src="adImg01" alt="" />
                 </template>
-                <template v-slot:title>Photo Frame</template>
-                <template v-slot:sub-title> @ Entry Point 1F Elevator Messaging</template>
-                <template v-slot:desc>  Captive Elevator Audience for Brand </template>
+                <template v-slot:title> {{ $t("mediaInventory.digital.section_1_title") }}</template>
+                <template v-slot:sub-title> {{ $t("mediaInventory.digital.section_1_sub_title") }}</template>
+                <template v-slot:desc> {{ $t("mediaInventory.digital.section_1_desc") }}</template>
                 <template v-slot:sub-desc>
-                    <div>Location: ARC Towers Entry Point</div>
-                    <div>Device Size: 0.4m (H) x 0.7m (W)</div>
-                    <div>Screen Size: 32 inches ( 1080px X 1920px)</div>
-                    <div>2 sets available</div>
+                    <div>{{ $t("mediaInventory.digital.section_1_sub_desc[0]") }}</div>
+                    <div>{{ $t("mediaInventory.digital.section_1_sub_desc[1]") }}</div>
+                    <div>{{ $t("mediaInventory.digital.section_1_sub_desc[2]") }}</div>
+                    <div>{{ $t("mediaInventory.digital.section_1_sub_desc[3]") }}</div>
                 </template>
             </MediaInventorySectionContentItem>
             <!--     end 1       -->
             <!--     start 2 -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>
-                    <img :src="adImg02" alt="" />
+                    <img :src="adImg01" alt="" />
                 </template>
-                <template v-slot:title>HD Display</template>
-                <template v-slot:sub-title>@ 1F Entrance Lobby</template>
-                <template v-slot:desc> Premium 75” HD Screen for High-Impact Lobby Ads</template>
+                <template v-slot:title> {{ $t("mediaInventory.digital.section_2_title") }}</template>
+                <template v-slot:sub-title> {{ $t("mediaInventory.digital.section_2_sub_title") }}</template>
+                <template v-slot:desc> {{ $t("mediaInventory.digital.section_2_desc") }}</template>
                 <template v-slot:sub-desc>
-                    <div>Location: Main Entry Point of ARC Towers</div>
-                    <div>Screen Size: 75 inches ( 1080px X 1920px)</div>
+                    <div>{{ $t("mediaInventory.digital.section_2_sub_desc[0]") }}</div>
+                    <div>{{ $t("mediaInventory.digital.section_2_sub_desc[1]") }}</div>
                 </template>
             </MediaInventorySectionContentItem>
             <!--  end 2 -->
             <!--  start 3 -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>
-                    <img :src="adImg03" alt="" />
+                    <img :src="adImg01" alt="" />
                 </template>
-                <template v-slot:title>In App Ads </template>
-                <template v-slot:sub-title> @ ARC Mall App ABC Prime App</template>
-                <template v-slot:desc>Direct Digital Reach via Property and Mall Apps</template>
+                <template v-slot:title> {{ $t("mediaInventory.digital.section_3_title") }}</template>
+                <template v-slot:sub-title> {{ $t("mediaInventory.digital.section_3_sub_title") }}</template>
+                <template v-slot:desc> {{ $t("mediaInventory.digital.section_3_desc") }}</template>
                 <template v-slot:sub-desc>
-                    <div>Location: in App</div>
-                    <div>Device: Web & Mobile</div>
-                    <div>Screen: 9:16 & 16:9，Customize banner</div>
+                    <div>{{ $t("mediaInventory.digital.section_3_sub_desc[0]") }}</div>
+                    <div>{{ $t("mediaInventory.digital.section_3_sub_desc[1]") }}</div>
+                    <div>{{ $t("mediaInventory.digital.section_3_sub_desc[2]") }}</div>
                 </template>
             </MediaInventorySectionContentItem>
             <!--  end 3   -->

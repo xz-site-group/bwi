@@ -15,9 +15,9 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
 <template>
     <BaseLayout>
         <BasicAd :src="MediaInventoryTopImg">
-            <div class="" :style="{ fontSize: baseAdTextSize }">
-                <div>FROM SCREENS TO STREETS.</div>
-                <div>FROM ADS TO EXPERIENCES.</div>
+            <div class="" :style="{ fontSize: baseAdTextSize, textAlign: 'center' }">
+                <div data-lang-text="PRIME MEDIA SPACES">{{ $t('mediaInventory.banner_text_1') }}</div>
+                <div data-lang-text="@THE HEART OF ARC TOWERS.">{{ $t('mediaInventory.banner_text_2') }}</div>
             </div>
         </BasicAd>
         <!--   01  -->
@@ -25,22 +25,22 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <MediaInventorySectionHeader >
             <template v-slot:title>
                 <div>
-                    <div>Outdoor</div>
-                    <div>Media</div>
+                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.outdoor.title") }}</div>
+                    <div>{{ $t("mediaInventory.common.title") }}</div>
                 </div>
             </template>
             <div>
                 <p>
                     <span class="decoration">/</span>
-                    Building Façade LED Wall (high-impact, visible across the district)
+                    {{ $t("mediaInventory.outdoor.desc[0]") }}
                 </p>
                 <p>
                     <span class="decoration">/</span>
-                    Large-format outdoor billboards along main entry routes
+                    {{ $t("mediaInventory.outdoor.desc[1]") }}
                 </p>
                 <p>
                     <span class="decoration">/</span>
-                    Illuminated signage in high-traffic public spaces
+                    {{ $t("mediaInventory.outdoor.desc[2]") }}
                 </p>
             </div>
         </MediaInventorySectionHeader>
@@ -52,22 +52,22 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <MediaInventorySectionHeader >
             <template v-slot:title>
                 <div>
-                    <div>Indoor</div>
-                    <div>Media</div>
+                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.indoor.title") }}</div>
+                    <div>{{ $t("mediaInventory.common.title") }}</div>
                 </div>
             </template>
             <div>
                 <p>
                     <span class="decoration">/</span>
-                    Mall atrium banners and hanging displays
+                    {{ $t("mediaInventory.indoor.desc[0]") }}
                 </p>
                 <p>
                     <span class="decoration">/</span>
-                    Elevator and corridor lightboxes
+                    {{ $t("mediaInventory.indoor.desc[1]") }}
                 </p>
                 <p>
                     <span class="decoration">/</span>
-                    In-mall digital screens and interactive kiosks
+                    {{ $t("mediaInventory.indoor.desc[2]") }}
                 </p>
             </div>
         </MediaInventorySectionHeader>
@@ -79,22 +79,22 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <MediaInventorySectionHeader >
             <template v-slot:title>
                 <div>
-                    <div>Digital</div>
-                    <div>Media</div>
+                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.digital.title") }}</div>
+                    <div>{{ $t("mediaInventory.common.title") }}</div>
                 </div>
             </template>
             <div>
                 <p>
                     <span class="decoration">/</span>
-                    Property app: push notifications, splash screens, in-app banners
+                    {{ $t("mediaInventory.digital.desc[0]") }}
                 </p>
                 <p>
                     <span class="decoration">/</span>
-                    Online mall: homepage banners, promotional zones
+                    {{ $t("mediaInventory.digital.desc[1]") }}
                 </p>
                 <p>
                     <span class="decoration">/</span>
-                    In-mall digital screens and interactive kiosks
+                    {{ $t("mediaInventory.digital.desc[2]") }}
                 </p>
             </div>
         </MediaInventorySectionHeader>
