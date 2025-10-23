@@ -1,0 +1,1 @@
+.section-title[data-v-211bd012]{position:relative;display:flex;flex-direction:row}.right[data-v-211bd012]{width:clamp(40px,5.5vw,220px)}.right[data-v-211bd012]:after{content:"";position:absolute;top:0;left:-30px;width:clamp(10px,5vw,100px);min-width:10px;max-width:100px;height:100%;aspect-ratio:1/4;background:red;transform:skew(-15deg)}
