@@ -31,6 +31,19 @@
         "list2": "- 管理现场和在线广告渠道",
         "list3": "- 提供全方位的媒体租赁、活动执行和平台开发服务"
     },
+    "services": {
+
+    },
+    "mediaInventory": {
+
+    },
+    "newsInsights": {
+
+    },
+    "newsDetail": {
+
+    },
+    "contact": {},
     "hello": "你好世界",
     "welcome": "欢迎来到我们的网站"
 }
