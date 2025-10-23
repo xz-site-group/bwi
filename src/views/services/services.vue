@@ -13,8 +13,8 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
     <BaseLayout>
         <BasicAd :src="ServicesAdImg">
             <div class="" :style="{ fontSize: bannalTextSize }">
-                <div>FROM SCREENS TO STREETS.</div>
-                <div>FROM ADS TO EXPERIENCES.</div>
+                <div data-lang-text="FROM SCREENS TO STREETS"> {{ $t('services.banner_text_1') }}</div>
+                <div data-lang-text="FROM ADS TO EXPERIENCES."> {{ $t('services.banner_text_2') }}</div>
             </div>
         </BasicAd>
         <!--   01  -->
@@ -22,12 +22,14 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
             <template v-slot:decorative-number>01</template>
             <template v-slot:title>
                 <div>
-                    <div>Media Leasing</div>
-                    <div>& Representation</div>
+                    <div data-lang-text="Media Leasing">{{ $t('services.section_1_title_1') }}</div>
+                    <div data-lang-text="Representation">{{ $t('services.section_1_title_2') }}</div>
                 </div>
             </template>
             <div>
-                <p>Management and monetization of ACR Towers’, physical advertising spaces, including building façades, LED billboards, mall interiors, and outdoor signage.</p>
+                <p data-lang-text="">
+                    {{ $t('services.section_1_content') }}
+                </p>
             </div>
         </ServicesSection>
         <!--   end 01 -->
@@ -36,12 +38,14 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
             <template v-slot:decorative-number>02</template>
             <template v-slot:title>
                 <div>
-                    <div>Campaign Strategy </div>
-                    <div>& Event Execution</div>
+                    <div data-lang-text="活动策划">{{ $t('services.section_2_title_1') }}</div>
+                    <div data-lang-text="& Event Execution">{{ $t('services.section_2_title_2') }}</div>
                 </div>
             </template>
             <div>
-                <p>Planning and executing marketing activations across online and offline channels — seasonal campaigns, mall events, product launches, and experiential marketing.</p>
+                <p>
+                    {{ $t('services.section_2_content') }}
+                </p>
             </div>
         </ServicesSection>
         <!--   end 02 -->
@@ -51,12 +55,15 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
             <template v-slot:decorative-number>03</template>
             <template v-slot:title>
                 <div>
-                    <div>Creative Direction</div>
-                    <div>& Production Oversight</div>
+
+                    <div data-lang-text="Creative Direction">{{ $t('services.section_3_title_1') }}</div>
+                    <div data-lang-text="& Production Oversight">{{ $t('services.section_3_title_2') }}</div>
                 </div>
             </template>
             <div>
-                <p>Concept development, visual asset creation, and quality control via external production partners.</p>
+                <p>
+                    {{ $t('services.section_3_content') }}
+                </p>
             </div>
         </ServicesSection>
         <!--   end 03 -->
@@ -66,12 +73,15 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
             <template v-slot:decorative-number>04</template>
             <template v-slot:title>
                 <div>
-                    <div>Digital Platform </div>
-                    <div>Development & Support</div>
+
+                    <div data-lang-text="Digital Platform">{{ $t('services.section_4_title_1') }}</div>
+                    <div data-lang-text="Development & Support">{{ $t('services.section_4_title_2') }}</div>
                 </div>
             </template>
             <div>
-                <p>Building and maintaining property apps, e-commerce, platforms, and campaign-specific microsites to enhance marketing reach and engagement.</p>
+                <p>
+                    {{ $t('services.section_4_content') }}
+                </p>
             </div>
         </ServicesSection>
         <!--   end 04 -->

@@ -32,7 +32,20 @@
         "list3": "- 提供全方位的媒体租赁、活动执行和平台开发服务"
     },
     "services": {
-
+        "banner_text_1": "从屏幕到街头",
+        "banner_text_2": "从广告到体验",
+        "section_1_title_1": "媒体租赁",
+        "section_1_title_2": "与代理",
+        "section_1_content": "管理并货币化ACR Towers的实体广告空间，包括建筑立面、LED广告牌、商场内部和户外标识。",
+        "section_2_title_1": "活动策划",
+        "section_2_title_2": "与执行",
+        "section_2_content": "在线上线下渠道规划并执行营销活动——季节性活动、商场活动、产品发布和体验式营销。",
+        "section_3_title_1": "创意指导",
+        "section_3_title_2": "与监督",
+        "section_3_content": "通过外部制作合作伙伴进行概念开发、视觉资产创建和质量控制。",
+        "section_4_title_1": "数字平台",
+        "section_4_title_2": "开发与支持",
+        "section_4_content": "构建并维护物业应用、电子商务平台以及活动特定的微型网站，以增强营销覆盖面和参与度。"
     },
     "mediaInventory": {
 
