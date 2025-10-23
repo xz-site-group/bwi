@@ -70,7 +70,7 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
 
 <template>
     <BaseLayout>
-        <BasicAd :src="baseAdImg1920" >
+        <BasicAd :src="baseAdImg1920" :srcset="adSrcset">
             <div class="" :style="{ fontSize: bannalTextSize }">
                 <div data-lang-text="FROM SCREENS TO STREETS"> {{ $t('services.banner_text_1') }}</div>
                 <div data-lang-text="FROM ADS TO EXPERIENCES."> {{ $t('services.banner_text_2') }}</div>

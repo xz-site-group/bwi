@@ -74,7 +74,7 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
 
 <template>
     <BaseLayout>
-        <BasicAd :src="baseAdImg750" :srcset="adSrcset">
+        <BasicAd :src="baseAdImg1920" :srcset="adSrcset">
             <div class="" :style="{ fontSize: baseAdTextSize, textAlign: 'center' }">
                 <div data-lang-text="PRIME MEDIA SPACES">{{ $t('mediaInventory.banner_text_1') }}</div>
                 <div data-lang-text="@THE HEART OF ARC TOWERS.">@{{ $t('mediaInventory.banner_text_2') }}</div>
