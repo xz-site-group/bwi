@@ -168,7 +168,34 @@
     "newsDetail": {
 
     },
-    "contact": {},
+    "contact": {
+        "adText1": "开始行动",
+        "adText2": "您的下一个活动",
+        "pageTitle1": "准备好颠覆了吗？",
+        "pageTitle2": "这是我们的联系方式。",
+        "decorationText": "/",
+        "emailLabel": "邮箱：",
+        "telLabel": "电话：",
+        "addressLabel": "地址：菲律宾宿务市N.Bacalso大道，V. Rama街角",
+        "responseTime": "我们将在1-2个工作日内回复您。",
+        "formTopicLabel": "主题",
+        "formNameLabel": "姓名",
+        "formEmailLabel": "邮箱",
+        "formMessageLabel": "消息",
+        "formSubmitButton": "发送",
+        "formSubmitButtonSubmitting": "发送中...",
+        "formSuccessTitle": "提交成功！",
+        "formSuccessMessage": "感谢您的反馈。我们会尽快与您联系。",
+        "formSuccessButton": "再次提交",
+        "formErrorTitle": "提交失败",
+        "formErrorMessage": "请稍后再试，或发送邮件至",
+        "formErrorButton": "重试",
+        "googleDisclaimer": "请勿通过Google表单提交密码。此内容并非由Google创建或支持。",
+        "formTopicPlaceholder": "选择主题",
+        "formNamePlaceholder": "请输入您的名字",
+        "formEmailPlaceholder": "请输入您的邮箱",
+        "formMessagePlaceholder": "请输入您的消息"
+    },
     "hello": "你好世界",
     "welcome": "欢迎来到我们的网站"
 }

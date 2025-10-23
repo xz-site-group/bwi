@@ -15,8 +15,8 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(72, 1
         <!-- 顶部广告 -->
         <BasicAd :src="newsBg">
             <div class="" :style="{ fontSize: baseAdTextSize }">
-                <div class="">LET'S START</div>
-                <div class="">YOUR NEXT CAMPAIGN.</div>
+                <div class="">{{ $t('contact.adText1') }}</div>
+                <div class="">{{ $t('contact.adText2') }}</div>
             </div>
         </BasicAd>
 
@@ -25,16 +25,16 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(72, 1
 
         <div class="container m-auto md:flex md:flex-row">
             <!-- 联系信息部分 -->
-            <div class="relative xl:px-4 md:flex-1 ">
-                <div class=" px-4 m-auto ">
+            <div class="relative xl:px-4 md:flex-1">
+                <div class="px-4 m-auto">
                     <!-- 标题 -->
                     <div class="flex flex-row items-center relative">
                         <div
                             class="leading-none font-medium pr-4"
                             :style="{ fontSize: sectionTitleTextSize }"
                         >
-                            <div>Ready to disrupt?</div>
-                            <div>Here's our info.</div>
+                            <div>{{ $t('contact.pageTitle1') }}</div>
+                            <div>{{ $t('contact.pageTitle2') }}</div>
                         </div>
                         <div
                             class="decoration flex justify-center items-center leading-[1] text-[#ff0000]"
@@ -44,12 +44,14 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(72, 1
 
                     <!-- 联系方式 -->
                     <div class="pt-3">
-                        <div class="pt-2">📧 Email: info@bwi.com</div>
-                        <div class="pt-2">📞 Tel: +63-123-456-7890</div>
+                        <div class="pt-2">📧 {{ $t('contact.emailLabel') }}: info@bwi.com</div>
+                        <div class="pt-2">📞 {{ $t('contact.telLabel') }}: +63-123-456-7890</div>
                         <div class="pt-2">
-                            📍 Address: N.Bacalso Ave., Corner V. Rama St., Cebu City, Philippines
+                            📍{{ $t('contact.addressLabel') }}
                         </div>
-                        <div class="p-2 md:p-10">We’ll get back to you within 1–2 business days.</div>
+                        <div class="p-2 md:p-10">
+                            {{ $t('contact.responseTime') }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,7 +60,6 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(72, 1
             <div class="md:hidden w-full h-[4vw] max-h-[100px]"></div>
 
             <CustomGoogleForm class="md:flex-1"></CustomGoogleForm>
-
         </div>
 
         <!-- 底部间距 -->

@@ -74,7 +74,7 @@ const resetForm = () => {
             <form @submit.prevent="handleSubmit" novalidate>
                 <!-- Topic -->
                 <div class="mb-4">
-                    <label for="topic" class="block font-semibold text-gray-700 mb-2">Topic <span class="text-red-500">*</span></label>
+                    <label for="topic" class="block font-semibold text-gray-700 mb-2">{{ $t('contact.formTopicLabel') }} <span class="text-red-500">*</span></label>
                     <select
                         v-model="formData.topic"
                         id="topic"
@@ -91,14 +91,14 @@ const resetForm = () => {
 
                 <!-- Name -->
                 <div class="mb-4">
-                    <label for="name" class="block font-semibold text-gray-700 mb-2">Name <span class="text-red-500">*</span></label>
+                    <label for="name" class="block font-semibold text-gray-700 mb-2">{{ $t('contact.formNameLabel') }} <span class="text-red-500">*</span></label>
                     <input
                         v-model="formData.name"
                         type="text"
                         id="name"
                         required
                         class="w-full p-3 border-b border-gray-300 text-base focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Enter your name"
+                        :placeholder="$t('contact.formNamePlaceholder')"
                         title="Enter your name"
                         data-lang-text="请输入您的名字"
                     >
@@ -106,28 +106,28 @@ const resetForm = () => {
 
                 <!-- Email -->
                 <div class="mb-4">
-                    <label for="email" class="block font-semibold text-gray-700 mb-2">Email <span class="text-red-500">*</span></label>
+                    <label for="email" class="block font-semibold text-gray-700 mb-2">{{ $t('contact.formEmailLabel') }} <span class="text-red-500">*</span></label>
                     <input
                         v-model="formData.email"
                         type="email"
                         id="email"
                         required
                         class="w-full p-3 border-b border-gray-300 text-base focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Enter your email"
+                        :placeholder="$t('contact.formEmailPlaceholder')"
                         data-lang-text="请输入您的邮箱"
                     >
                 </div>
 
                 <!-- Message -->
                 <div class="mb-4">
-                    <label for="message" class="block font-semibold text-gray-700 mb-2">Message </label>
+                    <label for="message" class="block font-semibold text-gray-700 mb-2">{{ $t('contact.formMessageLabel') }} </label>
                     <textarea
                         v-model="formData.message"
                         id="message"
                         required
                         rows="5"
                         class="w-full p-3 border border-gray-300 text-base resize-vertical focus:ring-0 focus:border-transparent outline-none transition-all"
-                        placeholder="Enter your message"
+                        :placeholder="$t('contact.formMessagePlaceholder')"
                         data-lang-text="请输入您的消息"
                     ></textarea>
                 </div>
@@ -140,8 +140,8 @@ const resetForm = () => {
                         class="submit-btn w-full text-white py-4 px-6 rounded-lg text-base font-medium hover:opacity-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
 
                     >
-                        <span v-if="!isSubmitting">Send</span>
-                        <span v-else>Send...</span>
+                        <span v-if="!isSubmitting">{{ $t('contact.formSubmitButton') }}</span>
+                        <span v-else>{{ $t('contact.formSubmitButtonSubmitting') }}</span>
                     </button>
                 </div>
 
@@ -151,35 +151,35 @@ const resetForm = () => {
         <!-- 成功消息 -->
         <div v-if="isSuccess" class="bg-green-50 border-2 border-green-400 rounded-lg p-8 text-center shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
             <div class="text-2xl mb-4">✅</div>
-            <p class="text-xl font-semibold text-green-800 mb-6">Submission Successful!</p>
-            <p class="text-gray-700 mb-8">Thank you for your feedback. We will contact you soon.</p>
+            <p class="text-xl font-semibold text-green-800 mb-6">{{ $t('contact.formSuccessTitle') }}</p>
+            <p class="text-gray-700 mb-8">{{ $t('contact.formSuccessMessage') }}</p>
             <button
                 @click="resetForm"
                 style="background: #FF0000;color: #fff;"
                 class="bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-lg font-medium transition-all duration-200"
             >
-                Submit Again
+                {{ $t('contact.formSuccessButton') }}
             </button>
         </div>
 
         <!-- 错误消息 -->
         <div v-if="isError" class="bg-red-50 border-2 border-red-400 rounded-lg p-8 text-center shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
             <div class="text-2xl mb-4">❌</div>
-            <p class="text-xl font-semibold text-red-800 mb-6">Submission Failed</p>
-            <p class="text-gray-700 mb-8">Please try again later or send an email to info@bwi.com</p>
+            <p class="text-xl font-semibold text-red-800 mb-6">{{ $t('contact.formErrorTitle') }}</p>
+            <p class="text-gray-700 mb-8">{{ $t('contact.formErrorMessage') }} info@bwi.com</p>
             <button
                 @click="resetForm"
                 class="bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-lg font-medium transition-all duration-200"
                 style="background: #FF0000;color: #fff;"
             >
-                Retry
+                {{ $t('contact.formErrorButton') }}
             </button>
         </div>
 
         <!-- Google 免责声明 -->
-        <p class="text-center text-xs text-gray-500 mt-8">
-            Never submit passwords through Google Forms. This content is neither created nor endorsed by Google.
-        </p>
+<!--        <p class="text-center text-xs text-gray-500 mt-8">-->
+<!--            {{ $t('contact.googleDisclaimer') }}-->
+<!--        </p>-->
     </div>
 </template>
 
