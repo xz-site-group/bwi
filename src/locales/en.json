@@ -161,7 +161,10 @@
         }
     },
     "newsInsights": {
-
+        "adText1": "PROVEN RESULTS.",
+        "adText2": "IMPACTFUL STORIES.",
+        "pageTitle1": "News &",
+        "pageTitle2": "Insights"
     },
     "newsDetail": {
 

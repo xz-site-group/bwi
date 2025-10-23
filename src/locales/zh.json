@@ -160,7 +160,10 @@
         }
     },
     "newsInsights": {
-
+        "adText1": "成果显著",
+        "adText2": "影响力故事",
+        "pageTitle1": "新闻与",
+        "pageTitle2": "洞察"
     },
     "newsDetail": {
 

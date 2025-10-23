@@ -9,8 +9,8 @@ const { fontSizeClamp: sectionDecorationTextSize } = useResponsiveFontSize(84, 1
         <div class=" m-auto pl-4 xl:px-16">
             <div class="flex flex-row items-center relative">
                 <div class=" leading-none  font-medium  pr-4 " :style="{fontSize:sectionTitleTextSize}">
-                    <div>News &</div>
-                    <div>Insights</div>
+                    <div>{{ $t('newsInsights.pageTitle1') }}</div>
+                    <div>{{ $t('newsInsights.pageTitle2') }}</div>
                 </div>
                 <div class="decoration flex justify-center items-center leading-[1] text-[#ff0000]" :style="{fontSize:sectionDecorationTextSize}"></div>
             </div>

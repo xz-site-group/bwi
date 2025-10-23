@@ -10,8 +10,8 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
 <template>
     <BasicAd :src="newsBg">
         <div class="" :style="{ fontSize: baseAdTextSize }">
-            <div class="">PROVEN RESULTS.</div>
-            <div class="flex flex-row justify-end">IMPACTFUL STORIES.</div>
+            <div class="">{{ $t('newsInsights.adText1') }}</div>
+            <div class="flex flex-row justify-end">{{ $t('newsInsights.adText2') }}</div>
         </div>
     </BasicAd>
 </template>
