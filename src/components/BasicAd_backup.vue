@@ -53,21 +53,7 @@ onMounted(() => {
     <!-- 这是一个广告组件。这个组件，应该包含一张图片或者一张视频   -->
     <section ref="basicAdRef" class="relative basic-ad h-[48vw] lg:h-[100dvh] overflow-hidden" >
         <div class="absolute top-0 left-0 w-full h-full -z-10">
-            <picture>
-                <source
-                    v-for="(src, index) in props.srcset"
-                    :key="index"
-                    :srcset="src.url"
-                    :media="src.media"
-                    :type="src.type || 'image/webp'"
-                />
-                <img
-                    :src="props.src"
-                    alt="广告图"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                />
-            </picture>
+            <img :src="props.src" alt="广告图" class="w-full h-full object-cover" />
         </div>
         <div class="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-50">
             <div

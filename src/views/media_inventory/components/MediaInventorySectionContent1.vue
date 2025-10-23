@@ -14,7 +14,7 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_03.webp'
                     <img :src="adImg01" alt="" />
                 </template>
                 <template v-slot:title> {{ $t("mediaInventory.outdoor.section_1_title") }}</template>
-                <template v-slot:sub-title> {{ $t("mediaInventory.outdoor.section_1_sub_title") }}</template>
+                <template v-slot:sub-title> @ {{ $t("mediaInventory.outdoor.section_1_sub_title") }}</template>
                 <template v-slot:desc> {{ $t("mediaInventory.outdoor.section_1_desc") }}</template>
                 <template v-slot:sub-desc>
                     <div>{{ $t("mediaInventory.outdoor.section_1_sub_desc[0]") }}</div>

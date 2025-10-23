@@ -6,18 +6,78 @@ import MediaInventorySectionContent1 from '@/views/media_inventory/components/Me
 import MediaInventorySectionContent2 from '@/views/media_inventory/components/MediaInventorySectionContent2.vue'
 import MediaInventorySectionContent3 from '@/views/media_inventory/components/MediaInventorySectionContent3.vue'
 import MediaInventoryFooter from '@/views/media_inventory/components/MediaInventoryFooter.vue'
-import MediaInventoryTopImg from '@/assets/images/media_inventory/top_ad_img_1920.png'
 import { useResponsiveFontSize } from '@/composables/useResponsiveFontSize.js'
+
+
+
+import  baseAdImg375 from '@/assets/images/media_inventory/base_ad_375.webp'
+import  baseAdImg563 from '@/assets/images/media_inventory/base_ad_563.webp'
+import  baseAdImg750 from '@/assets/images/media_inventory/base_ad_750.webp'
+import  baseAdImg960 from '@/assets/images/media_inventory/base_ad_1125.webp'
+import  baseAdImg1125 from '@/assets/images/media_inventory/base_ad_1125.webp'
+import  baseAdImg1440 from '@/assets/images/media_inventory/base_ad_1500.webp'
+import  baseAdImg1500 from '@/assets/images/media_inventory/base_ad_1500.webp'
+import  baseAdImg1920 from '@/assets/images/media_inventory/base_ad_1920.webp'
+import  baseAdImg3840 from '@/assets/images/media_inventory/base_ad_1920.webp'
+
+const adSrcset = [
+    {
+        url: baseAdImg375,
+        media: '(max-width: 375px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg563,
+        media: '(max-width: 563px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg750,
+        media: '(max-width: 750px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg960,
+        media: '(max-width: 960px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg1125,
+        media: '(max-width: 1125px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg1440,
+        media: '(max-width: 1440px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg1500,
+        media: '(max-width: 1500px)',
+        type: 'image/webp'
+    },
+    {
+        url: baseAdImg1920,
+        media: '(max-width: 1920px)',
+        type: 'image/webp'
+    },
+
+    {
+        url: baseAdImg3840,
+        media: '(max-width: 3840px)',
+        type: 'image/webp'
+    }
+]
 
 const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
 </script>
 
 <template>
     <BaseLayout>
-        <BasicAd :src="MediaInventoryTopImg">
+        <BasicAd :src="baseAdImg750" :srcset="adSrcset">
             <div class="" :style="{ fontSize: baseAdTextSize, textAlign: 'center' }">
                 <div data-lang-text="PRIME MEDIA SPACES">{{ $t('mediaInventory.banner_text_1') }}</div>
-                <div data-lang-text="@THE HEART OF ARC TOWERS.">{{ $t('mediaInventory.banner_text_2') }}</div>
+                <div data-lang-text="@THE HEART OF ARC TOWERS.">@{{ $t('mediaInventory.banner_text_2') }}</div>
             </div>
         </BasicAd>
         <!--   01  -->
