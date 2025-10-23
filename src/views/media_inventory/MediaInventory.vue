@@ -25,7 +25,10 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <MediaInventorySectionHeader >
             <template v-slot:title>
                 <div>
-                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.outdoor.title") }}</div>
+                    <div data-lang-text="Outdoor">
+                        {{ $t("mediaInventory.outdoor.title") }}
+                        <span>&nbsp;</span>
+                    </div>
                     <div>{{ $t("mediaInventory.common.title") }}</div>
                 </div>
             </template>
@@ -52,7 +55,10 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <MediaInventorySectionHeader >
             <template v-slot:title>
                 <div>
-                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.indoor.title") }}</div>
+                    <div data-lang-text="Outdoor">
+                        {{ $t("mediaInventory.indoor.title") }}
+                        <span>&nbsp;</span>
+                    </div>
                     <div>{{ $t("mediaInventory.common.title") }}</div>
                 </div>
             </template>
@@ -79,7 +85,7 @@ const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)
         <MediaInventorySectionHeader >
             <template v-slot:title>
                 <div>
-                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.digital.title") }}</div>
+                    <div data-lang-text="Outdoor"> {{ $t("mediaInventory.digital.title") }} <span>&nbsp;</span></div>
                     <div>{{ $t("mediaInventory.common.title") }}</div>
                 </div>
             </template>

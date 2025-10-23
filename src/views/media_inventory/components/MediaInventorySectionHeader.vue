@@ -49,7 +49,7 @@ const { fontSizeClamp: contentTextSize } = useResponsiveFontSize(11, 32)
 .decoration:after {
     content: '\002F';
     position:  absolute;
-    top: -4px;
+    top: -8px;
     color: #ff0000;
 }
 </style>
