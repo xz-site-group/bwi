@@ -1,5 +1,5 @@
 <script setup>
-import MediaKit from '@/assets/images/media_inventory/media_kit.webp'
+import MediaKit from '@/assets/images/media_inventory/media_kit.jpg'
 import MediaKitPDF from '@/assets/documents/media_kit.pdf' // 假设你的PDF文件路径
 import { useResponsiveFontSize } from '@/composables/useResponsiveFontSize.js'
 
