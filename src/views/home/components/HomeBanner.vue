@@ -1,62 +1,31 @@
 <script setup lang="ts">
 
 
-import  baseAdImg375 from '@/assets/images/home/home_bg_m_375.png'
-import  baseAdImg563 from '@/assets/images/home/home_bg_m_563.png'
-import  baseAdImg750 from '@/assets/images/home/home_bg_m_750.png'
-import  baseAdImg960 from '@/assets/images/home/home_bg_pc_960.png'
-import  baseAdImg1125 from '@/assets/images/home/home_bg_pc_1440.png'
-import  baseAdImg1440 from '@/assets/images/home/home_bg_pc_1440.png'
-import  baseAdImg1500 from '@/assets/images/home/home_bg_pc_1920.png'
-import  baseAdImg1920 from '@/assets/images/home/home_bg_pc_1920.png'
-import  baseAdImg3840 from '@/assets/images/home/home_bg_pc_1920.png'
+import  baseAdImg375 from '@/assets/images/home/home_bg_m_375.webp'
+import  baseAdImg563 from '@/assets/images/home/home_bg_m_563.webp'
+import  baseAdImg750 from '@/assets/images/home/home_bg_m_750.webp'
+import  baseAdImg1920 from '@/assets/images/home/home_bg_m_1920.webp'
 
 const adSrcset = [
     {
         url: baseAdImg375,
         media: '(max-width: 375px)',
-        type: 'image/jpeg'
+        type: 'image/webp'
     },
     {
         url: baseAdImg563,
         media: '(max-width: 563px)',
-        type: 'image/jpeg'
+        type: 'image/webp'
     },
     {
         url: baseAdImg750,
         media: '(max-width: 750px)',
-        type: 'image/jpeg'
-    },
-    {
-        url: baseAdImg960,
-        media: '(max-width: 960px)',
-        type: 'image/jpeg'
-    },
-    {
-        url: baseAdImg1125,
-        media: '(max-width: 1125px)',
-        type: 'image/jpeg'
-    },
-    {
-        url: baseAdImg1440,
-        media: '(max-width: 1440px)',
-        type: 'image/jpeg'
-    },
-    {
-        url: baseAdImg1500,
-        media: '(max-width: 1500px)',
-        type: 'image/jpeg'
+        type: 'image/webp'
     },
     {
         url: baseAdImg1920,
         media: '(max-width: 1920px)',
-        type: 'image/jpeg'
-    },
-
-    {
-        url: baseAdImg3840,
-        media: '(max-width: 3840px)',
-        type: 'image/jpeg'
+        type: 'image/webp'
     }
 ]
 </script>
@@ -73,7 +42,7 @@ const adSrcset = [
                     :type="src.type || 'image/webp'"
                 />
                 <img
-                    :src="baseAdImg750"
+                    :src="baseAdImg1920"
                     alt="广告图"
                     class="w-full h-full object-cover"
                     loading="lazy"
