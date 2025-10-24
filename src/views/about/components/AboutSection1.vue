@@ -6,7 +6,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
     <section class="relative">
         <div class="container px-4 pt-[6.5vw] mx-auto">
             <SectionTitle>
-                <div class="text-[5.4vw] lg:text-7xl font-bold leading-[1] max-w-[90%]">
+                <div class="text-[5.4vw] lg:text-7xl font-bold leading-[1.2] max-w-[90%]">
                     <div>{{ $t('aboutUs.title1') }}</div>
                     <div>{{ $t('aboutUs.title2') }}</div>
                 </div>
@@ -17,7 +17,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
             </SectionTitle>
             <div class="h-[3vw] max-h-[100px]"></div>
             <div class="text-[clamp(10px,2vw,32px)] lg:text-4xl flex justify-end">
-                <div class="lg:w-[80%] xl:w-[60%] leading-[1]">
+                <div class="lg:w-[80%] xl:w-[60%] leading-[1.5]">
                     <div>
                         <p>{{ $t('aboutUs.description2') }}</p>
                     </div>
@@ -34,7 +34,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
             <div class="h-[3vw] max-h-[100px]"></div>
             <!--      企业  介绍-->
             <div class="text-[clamp(10px,2vw,32px)] flex justify-end lg:text-4xl">
-                <ul class="lg:w-[80%] xl:w-[60%] leading-[1]">
+                <ul class="lg:w-[80%] xl:w-[60%] leading-[1.5]">
                     <li
                         class="pt-1"
                         data-i18n-text="- Headquartered in the Philippines, servicing ACR Towers and beyond"
