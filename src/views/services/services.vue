@@ -2,7 +2,7 @@
 import BaseLayout from '@/layout/BaseLayout.vue'
 import BasicAd from '@/components/BasicAd.vue'
 import ServicesSection from '@/views/services/components/ServicesSection.vue'
-
+import ServicesPartners from '@/views/services/components/ServicesPartners.vue'
 
 import  baseAdImg375 from '@/assets/images/services/services_bg_375.webp'
 import  baseAdImg750 from '@/assets/images/services/services_bg_750.webp'
@@ -126,6 +126,8 @@ const { fontSizeClamp: bannalTextSize } = useResponsiveFontSize(20, 96)
             </div>
         </ServicesSection>
         <!--   end 04 -->
+
+        <ServicesPartners></ServicesPartners>
     </BaseLayout>
 </template>
 
