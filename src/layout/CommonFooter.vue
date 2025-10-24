@@ -49,7 +49,7 @@ const { fontSizeClamp: twoFontSizeClamp } = useResponsiveFontSize(26, 105)
         </section>
         <section>
             <div
-                class="container  mx-auto m-8 text-white  text-center leading-none"
+                class="container font-black  mx-auto m-8 text-white  text-center leading-none"
                 :style="{
                     fontSize: twoFontSizeClamp
                 }"

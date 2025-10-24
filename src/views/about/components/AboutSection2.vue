@@ -1,9 +1,11 @@
 <script setup>
 import AbcBg375 from '@/assets/images/about/abc_bg_375.webp'
-import AbcBg563 from '@/assets/images/about/abc_bg_563.webp'
+import AbcBg563 from '@/assets/images/about/abc_bg_750.webp'
 import AbcBg750 from '@/assets/images/about/abc_bg_750.webp'
+import AbcBg960 from '@/assets/images/about/abc_bg_960.webp'
+import AbcBg1125 from '@/assets/images/about/abc_bg_1125.webp'
+import AbcBg1500 from '@/assets/images/about/abc_bg_1500.webp'
 import AbcBg1920 from '@/assets/images/about/abc_bg_1920.webp'
-import AbcBg3840 from '@/assets/images/about/abc_bg_3840.webp'
 </script>
 
 <template>
@@ -12,8 +14,10 @@ import AbcBg3840 from '@/assets/images/about/abc_bg_3840.webp'
             <source media="(max-width: 375px)" :srcset="AbcBg375" />
             <source media="(max-width: 563px)" :srcset="AbcBg563" />
             <source media="(max-width: 750px)" :srcset="AbcBg750" />
+            <source media="(max-width: 960px)" :srcset="AbcBg960" />
+            <source media="(max-width: 1125px)" :srcset="AbcBg1125" />
+            <source media="(max-width: 1500px)" :srcset="AbcBg1500" />
             <source media="(max-width: 1920px)" :srcset="AbcBg1920" />
-            <source media="(min-width: 1921px)" :srcset="AbcBg3840" />
             <img :src="AbcBg1920" alt="Responsive Image" />
         </picture>
         <!--      企业  介绍-->
