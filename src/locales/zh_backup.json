@@ -14,10 +14,10 @@
         "fromAdToExperience": "FROM AD TO EXPERIENCE."
     },
     "home": {
-        "paragraph1": "您的品牌",
-        "paragraph2": "我们的渠道",
-        "paragraph3": "一路直达",
-        "description": "一条通往可见性、影响力和增长的整合之路。",
+        "paragraph1": "Your Brand.",
+        "paragraph2": "Our Channels.",
+        "paragraph3": "One Billboard Way.",
+        "description": "An integrated route to visibility, impact and growth.",
         "button": "了解更多"
     },
     "aboutUs": {
@@ -32,8 +32,8 @@
         "list3": "- 提供全方位的媒体租赁、活动执行和平台开发服务"
     },
     "services": {
-        "banner_text_1": "FROM SCREENS TO STREETS",
-        "banner_text_2": "FROM ADS TO EXPERIENCES",
+        "banner_text_1": "从屏幕到街头",
+        "banner_text_2": "从广告到体验",
         "section_1_title_1": "媒体租赁",
         "section_1_title_2": "与代理",
         "section_1_content": "管理并货币化ACR Towers的实体广告空间，包括建筑立面、LED广告牌、商场内部和户外标识。",
@@ -51,8 +51,8 @@
         "common": {
             "title": "媒体"
         },
-        "banner_text_1": "PRIME MEDIA SPACES ",
-        "banner_text_2": "THE HEART OF ARC TOWERS.",
+        "banner_text_1": "核心位置 ",
+        "banner_text_2": "优质媒体空间",
         "outdoor": {
             "title": "户外",
             "desc": [
@@ -160,8 +160,8 @@
         }
     },
     "newsInsights": {
-        "adText1": "PROVEN RESULTS.",
-        "adText2": "IMPACTFUL STORIES.",
+        "adText1": "成果显著",
+        "adText2": "影响力故事",
         "pageTitle1": "新闻与",
         "pageTitle2": "洞察"
     },
@@ -169,8 +169,8 @@
 
     },
     "contact": {
-        "adText1": "LET'S START",
-        "adText2": "YOUR NEXT CAMPAIGN.",
+        "adText1": "开始行动",
+        "adText2": "您的下一个活动",
         "pageTitle1": "准备好颠覆了吗？",
         "pageTitle2": "这是我们的联系方式。",
         "decorationText": "/",

@@ -75,7 +75,7 @@ const adSrcset = [
         <BasicAd :src="baseAdImg1920" :srcset="adSrcset">
             <div class="" :style="{ fontSize: baseAdTextSize }">
                 <div class="">{{ $t('contact.adText1') }}</div>
-                <div class="">{{ $t('contact.adText2') }}</div>
+                <div class="text-right">{{ $t('contact.adText2') }}</div>
             </div>
         </BasicAd>
 
