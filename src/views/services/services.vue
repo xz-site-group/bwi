@@ -5,14 +5,11 @@ import ServicesSection from '@/views/services/components/ServicesSection.vue'
 
 
 import  baseAdImg375 from '@/assets/images/services/services_bg_375.webp'
-import  baseAdImg563 from '@/assets/images/services/services_bg_563.webp'
 import  baseAdImg750 from '@/assets/images/services/services_bg_750.webp'
 import  baseAdImg960 from '@/assets/images/services/services_bg_960.webp'
 import  baseAdImg1125 from '@/assets/images/services/services_bg_1125.webp'
 import  baseAdImg1440 from '@/assets/images/services/services_bg_1440.webp'
-import  baseAdImg1500 from '@/assets/images/services/services_bg_1500.webp'
 import  baseAdImg1920 from '@/assets/images/services/services_bg_1920.webp'
-import  baseAdImg3840 from '@/assets/images/services/services_bg_3840.webp'
 
 const adSrcset = [
     {
@@ -20,11 +17,7 @@ const adSrcset = [
         media: '(max-width: 375px)',
         type: 'image/webp'
     },
-    {
-        url: baseAdImg563,
-        media: '(max-width: 563px)',
-        type: 'image/webp'
-    },
+
     {
         url: baseAdImg750,
         media: '(max-width: 750px)',
@@ -46,21 +39,10 @@ const adSrcset = [
         type: 'image/webp'
     },
     {
-        url: baseAdImg1500,
-        media: '(max-width: 1500px)',
-        type: 'image/webp'
-    },
-    {
         url: baseAdImg1920,
         media: '(max-width: 1920px)',
         type: 'image/webp'
     },
-
-    {
-        url: baseAdImg3840,
-        media: '(max-width: 3840px)',
-        type: 'image/webp'
-    }
 ]
 
 import { useResponsiveFontSize } from '@/composables/useResponsiveFontSize.js'

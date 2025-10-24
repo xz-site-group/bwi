@@ -10,15 +10,12 @@ import { useResponsiveFontSize } from '@/composables/useResponsiveFontSize.js'
 
 
 
-import  baseAdImg375 from '@/assets/images/media_inventory/base_ad_375.png'
-import  baseAdImg563 from '@/assets/images/media_inventory/base_ad_563.png'
-import  baseAdImg750 from '@/assets/images/media_inventory/base_ad_750.png'
-import  baseAdImg960 from '@/assets/images/media_inventory/base_ad_1125.png'
-import  baseAdImg1125 from '@/assets/images/media_inventory/base_ad_1125.png'
-import  baseAdImg1440 from '@/assets/images/media_inventory/base_ad_1500.png'
-import  baseAdImg1500 from '@/assets/images/media_inventory/base_ad_1500.png'
+import  baseAdImg375 from '@/assets/images/media_inventory/base_ad_375.webp'
+import  baseAdImg563 from '@/assets/images/media_inventory/base_ad_563.webp'
+import  baseAdImg750 from '@/assets/images/media_inventory/base_ad_750.webp'
+import  baseAdImg1125 from '@/assets/images/media_inventory/base_ad_1125.webp'
+import  baseAdImg1500 from '@/assets/images/media_inventory/base_ad_1500.webp'
 import  baseAdImg1920 from '@/assets/images/media_inventory/base_ad_1920.webp'
-import  baseAdImg3840 from '@/assets/images/media_inventory/base_ad_1920.webp'
 
 const adSrcset = [
     {
@@ -36,21 +33,13 @@ const adSrcset = [
         media: '(max-width: 750px)',
         type: 'image/jpeg'
     },
-    {
-        url: baseAdImg960,
-        media: '(max-width: 960px)',
-        type: 'image/jpeg'
-    },
+
     {
         url: baseAdImg1125,
         media: '(max-width: 1125px)',
         type: 'image/jpeg'
     },
-    {
-        url: baseAdImg1440,
-        media: '(max-width: 1440px)',
-        type: 'image/jpeg'
-    },
+
     {
         url: baseAdImg1500,
         media: '(max-width: 1500px)',
@@ -61,12 +50,6 @@ const adSrcset = [
         media: '(max-width: 1920px)',
         type: 'image/webp'
     },
-
-    {
-        url: baseAdImg3840,
-        media: '(max-width: 3840px)',
-        type: 'image/webp'
-    }
 ]
 
 const { fontSizeClamp: baseAdTextSize } = useResponsiveFontSize(20, 96)

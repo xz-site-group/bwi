@@ -17,6 +17,10 @@ const props = defineProps({
         type: Boolean,
         default: true,
     },
+    hasMask: {
+        type: Boolean,
+        default: true
+    }
 })
 const basicAdRef = ref(null);
 let basicAdHeight = 0;
@@ -69,7 +73,7 @@ onMounted(() => {
                 />
             </picture>
         </div>
-        <div class="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-50">
+        <div class="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-50" v-if="hasMask">
             <div
                 class="w-full h-full flex flex-col justify-center items-center text-white "
                 v-if="showLogo || $refs.logo"
@@ -80,7 +84,7 @@ onMounted(() => {
                 </slot>
             </div>
         </div>
-        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 w-full lg:pb-28">
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 w-full lg:pb-28" >
             <div class="w-[82%]  mx-auto text-white  leading-none font-bold">
                 <HeaderPlaceHandler></HeaderPlaceHandler>
                 <slot></slot>
