@@ -129,7 +129,7 @@ onUnmounted(() => {
             <div class="block xl:hidden pr-4">
                 <button
                     id="nav-toggle"
-                    class="flex items-center p-1 text-yellow-500 hover:text-yellow-500 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                    class="flex items-center p-1 text-white hover:text-white focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
                     @click="toggleMenu"
                 >
                     <svg
