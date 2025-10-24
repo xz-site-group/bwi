@@ -27,7 +27,7 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_09.webp'
             <!--     start 2 -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>
-                    <img :src="adImg01" alt="" />
+                    <img :src="adImg02" alt="" />
                 </template>
                 <template v-slot:title> {{ $t("mediaInventory.digital.section_2_title") }}</template>
                 <template v-slot:sub-title> {{ $t("mediaInventory.digital.section_2_sub_title") }}</template>
@@ -41,7 +41,7 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_09.webp'
             <!--  start 3 -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>
-                    <img :src="adImg01" alt="" />
+                    <img :src="adImg03" alt="" />
                 </template>
                 <template v-slot:title> {{ $t("mediaInventory.digital.section_3_title") }}</template>
                 <template v-slot:sub-title> {{ $t("mediaInventory.digital.section_3_sub_title") }}</template>
