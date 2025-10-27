@@ -6,8 +6,8 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_03.webp'
 </script>
 
 <template>
-    <section class="relative">
-        <div class="md:flex gap-x-0.5">
+    <section class="relative overflow-hidden">
+        <div class="md:flex ">
             <!--   start 1         -->
             <MediaInventorySectionContentItem>
                 <template v-slot:img>

@@ -15,7 +15,7 @@ import MultiStageEntryAnimation from '@/components/MultiStageEntryAnimation.vue'
                 <div></div>
             </template>
         </BaseLayout>
-        <MultiStageEntryAnimation></MultiStageEntryAnimation>
+        <MultiStageEntryAnimation v-if="false"></MultiStageEntryAnimation>
     </div>
 
 </template>

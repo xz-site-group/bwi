@@ -6,10 +6,10 @@ import adImg03 from '@/assets/images/media_inventory/ad_img_09.webp'
 </script>
 
 <template>
-    <section class="relative">
-        <div class="md:flex gap-x-0.5">
+    <section class="relative ">
+        <div class="md:flex ">
             <!--   start 1         -->
-            <MediaInventorySectionContentItem>
+            <MediaInventorySectionContentItem >
                 <template v-slot:img>
                     <img :src="adImg01" alt="" />
                 </template>

@@ -6,7 +6,7 @@ const { fontSizeClamp: descTextSize } = useResponsiveFontSize(13, 28)
 </script>
 
 <template>
-    <div class="mod-1 pt-2 md:pt-9">
+    <div class="mod-1 p-[1px] pt-2 md:pt-9">
         <div class="img-wrap md:img-wrap-md flex flex-col ">
             <slot name="img">
                 <img :src="adImg01" alt="" />
@@ -41,8 +41,8 @@ const { fontSizeClamp: descTextSize } = useResponsiveFontSize(13, 28)
 }
 @media (min-width: 768px) {
     .img-wrap {
-        width: calc( ((100vw - 0.25rem) / 3)  );;
-        height: calc( ((100vw - 0.25rem) / 3)  );
+        width: calc( ((100vw - 4px - 18px) / 3) );
+        height: calc( ((100vw - 4px - 18px) / 3)  );
     }
 
 }

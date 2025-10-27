@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Logo from '@/assets/images/common/bwi_white_bg.png'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const stage1Show = ref(true); // 初始时，应该为 true
 const stage2Show = ref(false) // 初始时，应该为 false
@@ -14,7 +14,9 @@ setTimeout(() => {
     stage2Show.value = false;
 }, 4100)
 
-
+onMounted(() => {
+    console.log("3223")
+})
 
 
 </script>
@@ -109,6 +111,21 @@ setTimeout(() => {
 
     .content {
         position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+        //animation: grow 0.6s forwards, unskew 0.6s 0.5s forwards, fade-out 1s 2.3s forwards;
+        z-index: 1003;
+    }
+
+    .content:after {
+        content: '';
+        position: absolute;
         left: 50%;
         top: 50%;
         transform: skewX(-15deg) translate(-50%, -50%);
@@ -118,19 +135,15 @@ setTimeout(() => {
         //display: flex;
         //justify-content: center;
         //align-items: center;
-        animation: grow 0.6s forwards, unskew 0.6s 0.5s forwards, fade-out 1s 2.3s forwards;
-        z-index: 1003;
-    }
-
-    .content:after {
-        background-color: #ffffff;
+        animation: grow 1.6s forwards, fade-out 1s 2s forwards;
+        z-index: 1004;
     }
     .logo-wrap {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-
+        z-index: 1005;
         animation: moveLogo 1.2s 1.6s forwards;
     }
 }
@@ -146,8 +159,8 @@ setTimeout(() => {
 
 @keyframes grow {
     to {
-        width: 100%;
-        height: 100%;
+        width: 500%;
+        height: 500%;
         transform: skewX(-15deg) translate(-50%, -50%);
     }
 }
