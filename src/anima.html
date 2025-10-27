@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>开场动画 - 图层彻底消失</title>
+  <style>
+      * { margin:0; padding:0; box-sizing: border-box; }
+      body, html { width:100%; height:100%; overflow:hidden; font-family: Arial, sans-serif; }
+
+      /* ===== 真实页面 ===== */
+      #content {
+          position: fixed;
+          inset: 0;
+          background: #ffffff;
+          padding: 60px;
+          color: #222;
+          z-index: 1;
+      }
+      #content h1 { font-size: 48px; margin-bottom: 20px; }
+      #content p { font-size: 22px; line-height: 1.7; }
+      #content button {
+          margin-top: 30px;
+          padding: 16px 40px;
+          font-size: 20px;
+          background: #e74c3c;
+          color: white;
+          border: none;
+          border-radius: 12px;
+          cursor: pointer;
+          transition: 0.3s;
+      }
+      #content button:hover { background: #c0392b; }
+
+      /* ===== redElement：透明容器 ===== */
+      #redElement {
+          position: fixed;
+          inset: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: 10;
+          overflow: hidden;
+          background: #fff;
+          /* 动画结束后会通过 JS 移除 */
+      }
+
+      /* ===== innerRed：动画主体 ===== */
+      #innerRed {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 60px;
+          height: 60px;
+          background: #ff0000;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          box-shadow: 0 0 40px rgba(255,0,0,0.6);
+          animation:
+                  expand 1.6s 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards,
+                  fade 0.5s 2.1s forwards;
+      }
+
+      @keyframes expand {
+          to {
+              width: 120vw;
+              height: 120vh;
+              left: 50%;
+              top: 50%;
+              border-radius: 0;
+              transform: translate(-50%, -50%);
+          }
+      }
+      @keyframes fade {
+          to { opacity: 0; visibility: hidden; }
+      }
+
+      /* ===== 白色 Logo 层 ===== */
+      #logoLayer {
+          position: fixed;
+          inset: 0;
+          background: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: scale(0);
+          opacity: 0;
+          z-index: 9;
+          animation:
+                  show 0s 2.1s forwards,
+                  scaleUp 1.4s 2.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+      @keyframes show { to { opacity:1; } }
+      @keyframes scaleUp { to { transform: scale(1); } }
+
+      #logo {
+          position: absolute;
+          font-size: 100px;
+          font-weight: 900;
+          color: #ff0000;
+      }
+
+      #logoLayer.moving #logo {
+          animation: fly 1.2s 0s forwards;
+      }
+      @keyframes fly {
+          to { left: 60px; top: 60px; font-size: 44px; }
+      }
+
+      #logoLayer.fading {
+          animation: fadeOut 1.3s 0s forwards;
+      }
+      @keyframes fadeOut {
+          to { opacity: 0; visibility: hidden; }
+      }
+  </style>
+</head>
+<body>
+
+<!-- 真实页面 -->
+<div id="content">
+  <h1>欢迎进入系统</h1>
+  <p>这是一个真实的白色页面。<br>所有动画图层会在结束后 <strong>彻底消失</strong>。</p>
+  <button id="testBtn">点击我（测试交互）</button>
+</div>
+
+<!-- redElement + innerRed -->
+<div id="redElement">
+  <div id="innerRed"></div>
+</div>
+
+<!-- 白色 Logo 层 -->
+<div id="logoLayer">
+  <div id="logo">LOGO</div>
+</div>
+
+<script>
+  const redElement = document.getElementById('redElement');
+  const logoLayer = document.getElementById('logoLayer');
+  const testBtn = document.getElementById('testBtn');
+
+  // 第3步：LOGO 飞到左上角
+  setTimeout(() => {
+    logoLayer.classList.add('moving');
+  }, 3500);
+
+  // 第4步：白色层淡出
+  setTimeout(() => {
+    logoLayer.classList.add('fading');
+  }, 4700);
+
+  // 关键：动画完全结束后，移除两个动画图层
+  setTimeout(() => {
+    // 1. 移除 redElement
+    redElement.remove();
+
+    // 2. 移除 logoLayer
+    logoLayer.remove();
+
+    console.log('所有动画图层已彻底移除！');
+  }, 6000); // 1.3s 淡出 + 缓冲 = 6s 后彻底清理
+</script>
+
+</body>
+</html>

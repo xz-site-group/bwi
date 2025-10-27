@@ -2,11 +2,10 @@
 import BaseLayout from '@/layout/BaseLayout.vue'
 import HomeBanner from '@/views/home/components/HomeBanner.vue'
 import HomeDesc from '@/views/home/components/HomeDesc.vue'
-import MultiStageEntryAnimation from '@/components/MultiStageEntryAnimation.vue'
 </script>
 
 <template>
-    <div class="relative">
+    <div>
         <BaseLayout>
             <HomeBanner class=" " >
                 <HomeDesc></HomeDesc>
@@ -15,7 +14,6 @@ import MultiStageEntryAnimation from '@/components/MultiStageEntryAnimation.vue'
                 <div></div>
             </template>
         </BaseLayout>
-        <MultiStageEntryAnimation></MultiStageEntryAnimation>
     </div>
-
+   
 </template>
