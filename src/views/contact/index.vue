@@ -86,8 +86,12 @@ const adSrcset = [
 
                     <!-- 联系方式 -->
                     <div class="pt-3">
-                        <div class="pt-2">📧 {{ $t('contact.emailLabel') }}: info@bwi.com</div>
-                        <div class="pt-2">📞 {{ $t('contact.telLabel') }}: +63-123-456-7890</div>
+<!--                        <div class="pt-2">📧 {{ $t('contact.emailLabel') }} info@bwi.com</div>-->
+                        <div class="pt-2">📞 {{ $t('contact.telLabel') }}
+                            <span> +63 956 243 6291  </span>
+                            <span>、</span>
+                            <span>(032) 2381306</span>
+                        </div>
                         <div class="pt-2">
                             📍{{ $t('contact.addressLabel') }}
                         </div>

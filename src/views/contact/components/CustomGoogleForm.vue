@@ -18,6 +18,7 @@ const topicOptions = ref([
 const formData = ref({
     topic: topicOptions.value[0].value,
     name: '',
+    phone: '',
     email: '',
     message: ''
 })
@@ -36,6 +37,7 @@ const handleSubmit = async () => {
     const submitData = new FormData()
     submitData.append('entry.958710747', formData.value.topic)      // Topic
     submitData.append('entry.912145198', formData.value.name)       // Name
+    submitData.append('entry.251346220', formData.value.phone)       // Name
     submitData.append('entry.1684097434', formData.value.email)     // Email
     submitData.append('entry.807214667', formData.value.message)    // Message
 
@@ -58,6 +60,7 @@ const resetForm = () => {
     formData.value = {
         topic: topicOptions.value[0].value,
         name: '',
+        phone: '',
         email: '',
         message: ''
     }
@@ -101,6 +104,21 @@ const resetForm = () => {
                         :placeholder="$t('contact.formNamePlaceholder')"
                         title="Enter your name"
                         data-lang-text="请输入您的名字"
+                    >
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-4">
+                    <label for="name" class="block font-semibold text-gray-700 mb-2">{{ $t('contact.formPhoneLabel') }} <span class="text-red-500">*</span></label>
+                    <input
+                        v-model="formData.phone"
+                        type="text"
+                        id="name"
+                        required
+                        class="w-full p-3 border-b border-gray-300 text-base focus:ring-0 focus:border-transparent outline-none transition-all"
+                        :placeholder="$t('contact.formPhoneLabelPlaceholder')"
+                        title="Enter your name"
+                        data-lang-text="手机号码"
                     >
                 </div>
 

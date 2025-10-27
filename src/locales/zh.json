@@ -181,6 +181,7 @@
         "responseTime": "我们将在1-2个工作日内回复您。",
         "formTopicLabel": "主题",
         "formNameLabel": "姓名",
+        "formPhoneLabel": "手机",
         "formEmailLabel": "邮箱",
         "formMessageLabel": "消息",
         "formSubmitButton": "发送",
@@ -194,6 +195,7 @@
         "googleDisclaimer": "请勿通过Google表单提交密码。此内容并非由Google创建或支持。",
         "formTopicPlaceholder": "选择主题",
         "formNamePlaceholder": "请输入您的名字",
+        "formPhoneLabelPlaceholder": "请输入您的手机",
         "formEmailPlaceholder": "请输入您的邮箱",
         "formMessagePlaceholder": "请输入您的消息"
     },
