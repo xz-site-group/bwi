@@ -12,8 +12,12 @@ defineProps({
 
 <template>
 
-    <BaseLayout :current-path="'/news-insights'">
-        <NewsAd></NewsAd>
+    <BaseLayout :current-path="'/news-insights'" :use-fixed-opacity="true">
+<!--        <NewsAd></NewsAd>-->
+        <div
+            class="mx-auto h-[12vw] max-h-[100px] min-h-[56px]  mt-0 py-2 px-[20px]"
+        >
+        </div>
         <div class="w-full h-[4vw] max-h-[100px]"></div>
         <NewsPageTitle></NewsPageTitle>
         <div class="w-full h-[4vw] max-h-[70px]"></div>

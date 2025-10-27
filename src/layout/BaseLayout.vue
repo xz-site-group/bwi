@@ -10,6 +10,10 @@ const props = defineProps({
     isFlex: {
         type: Boolean,
         default: false,
+    },
+    useFixedOpacity: {
+        type: Boolean,
+        default: false,
     }
 })
 </script>
@@ -17,7 +21,7 @@ const props = defineProps({
 <template>
     <div class="base-layout" :class="{'base-layout--flex': isFlex}">
         <div class="base-layout__header w-full">
-            <CommonHeader :static-route-path="props.currentPath"></CommonHeader>
+            <CommonHeader :static-route-path="props.currentPath" :use-fixed-opacity="useFixedOpacity"></CommonHeader>
         </div>
         <div class="base-layout__content w-full">
             <slot>

@@ -15,6 +15,10 @@ const props = defineProps({
         type: String,
         default: '',
     },
+    useFixedOpacity: {
+        type: Boolean,
+        default: false,
+    }
 })
 
 const route = useRoute()
@@ -83,6 +87,19 @@ const handleScroll = () => {
 };
 // 计算背景色的透明度
 const headerStyle = computed(() => {
+    if (props.useFixedOpacity) {
+        return {
+            backgroundColor: `rgba(0, 0, 0, 0.8)`,
+        };
+        // 如果 useFixedOpacity 为 true，透明度在 0.8 到 1 之间根据滚动位置动态变化
+        // const maxOpacity = 1;
+        // const minOpacity = 0.8;
+        // const range = maxOpacity - minOpacity;
+        // const opacity = minOpacity + (scrollPosition.value / 200) * range;
+        // return {
+        //     backgroundColor: `rgba(0, 0, 0, ${Math.min(opacity, maxOpacity)})`,
+        // };
+    }
     const opacity = Math.min(scrollPosition.value / 200, 0.8);
     return {
         backgroundColor: `rgba(0, 0, 0, ${opacity})`,
@@ -114,7 +131,7 @@ onUnmounted(() => {
             <!-- logo -->
             <div class="flex items-center">
                 <a
-                    class="text-white no-underline hover:no-underline font-bold text-xl lg:text-2xl flex items-center"
+                    class="text-white no-underline hover:no-underline  text-xl lg:text-2xl flex items-center"
                     href="/"
                 >
                     <img
@@ -155,7 +172,7 @@ onUnmounted(() => {
                         v-for="item in navList"
                         :key="item.key"
                         :to="item.path"
-                        class="item-nav pc-item-nav font-bold"
+                        class="item-nav pc-item-nav "
                         :class="{ active: selectedNavPath === item.path }"
                         @click="itemNavHandler(item)"
                     >
@@ -200,7 +217,7 @@ onUnmounted(() => {
                     :to="item.path"
                     custom
                     v-slot="{ navigate }"
-                    class="item-nav mobile-item-nav px-4 py-2 block font-bold"
+                    class="item-nav mobile-item-nav px-4 py-2 block "
                     :class="{ active: selectedNavPath === item.path }"
                     @click.stop="itemNavHandler(item)"
                 >
@@ -263,8 +280,8 @@ onUnmounted(() => {
 
 <style scoped>
 #header {
-    backdrop-filter: blur(2px); /* 添加模糊效果以增强透明度视觉效果 */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.65);
+    //backdrop-filter: blur(2px); /* 添加模糊效果以增强透明度视觉效果 */
+    //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.65);
 }
 
 .item-nav {
