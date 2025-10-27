@@ -130,17 +130,14 @@ onUnmounted(() => {
         >
             <!-- logo -->
             <div class="flex items-center">
-                <a
-                    class="text-white no-underline hover:no-underline  text-xl lg:text-2xl flex items-center"
-                    href="/"
-                >
+                <RouterLink class="text-white no-underline hover:no-underline  text-xl lg:text-2xl flex items-center" to="/">
                     <img
                         :src="Logo"
                         class="w-[125px] sm:w-[200px] xl:w-[250px]"
                         alt="logo"
                         decoding="async"
                     />
-                </a>
+                </RouterLink>
             </div>
             <!-- nav-toggle -->
             <div class="block xl:hidden pr-4">

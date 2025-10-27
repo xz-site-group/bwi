@@ -1,23 +1,42 @@
 <script lang="ts" setup>
 import Logo from '@/assets/images/common/bwi_white_bg.png'
-import { ref, onMounted } from 'vue'
+import { ref,onMounted } from 'vue'
 
 const stage1Show = ref(true); // 初始时，应该为 true
 const stage2Show = ref(false) // 初始时，应该为 false
-setTimeout(() => {
-    stage1Show.value = false
-    stage2Show.value = true;
-}, 1600)
 
-setTimeout(() => {
-    stage1Show.value = false
-    stage2Show.value = false;
-}, 4100)
+// 获取当前时间戳
+const now = Date.now();
+
+// 获取保存的时间戳
+const lastLoaded = sessionStorage.getItem('lastLoaded');
+
+const oneDay = 24 * 60 * 60 * 1000;
+
 
 onMounted(() => {
-    console.log("3223")
-})
+    // 如果已经加载过，直接设置 stage1Show 和 stage2Show 的值
+    // 如果没有保存时间戳，或者时间差超过一天
+    if (!lastLoaded || now - parseInt(lastLoaded, 10) > oneDay) {
+        // 设置定时器来控制动画
+        setTimeout(() => {
+            stage1Show.value = false;
+            stage2Show.value = true;
+        }, 1600);
 
+        setTimeout(() => {
+            stage1Show.value = false;
+            stage2Show.value = false;
+        }, 4100);
+
+        // 更新时间戳
+        sessionStorage.setItem('lastLoaded', now.toString());
+    } else {
+        // 如果时间差没有超过一天，跳过动画
+        stage1Show.value = false;
+        stage2Show.value = false;
+    }
+});
 
 </script>
 
