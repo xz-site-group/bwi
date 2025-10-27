@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import Logo from '@/assets/images/common/bwi_black.svg'
-import { ref,onMounted } from 'vue'
+import Logo from '@/assets/images/common/bwi_white_bg.png'
+import { ref } from 'vue'
 
-const logoWrapAbsCls = ref('')
 const stage1Show = ref(true); // 初始时，应该为 true
 const stage2Show = ref(false) // 初始时，应该为 false
 setTimeout(() => {
